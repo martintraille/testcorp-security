@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Testing Services - TestCorp</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../animations.css">
+    <style>
+        .service-page { padding-top: 100px; min-height: 100vh; }
+        .service-hero { text-align: center; padding: 3rem 2rem; background: linear-gradient(135deg, var(--bg-dark) 0%, var(--primary-color) 100%); }
+        .service-hero h1 { color: var(--secondary-color); font-size: 3rem; margin-bottom: 1rem; }
+        .service-hero p { color: var(--text-muted); font-size: 1.3rem; max-width: 800px; margin: 0 auto; }
+        .service-content { max-width: 1200px; margin: 0 auto; padding: 3rem 2rem; }
+        .sub-services { display: grid; gap: 3rem; margin-top: 3rem; }
+        .sub-service { background: var(--bg-card); padding: 2rem; border-radius: 10px; border: 1px solid var(--border-color); scroll-margin-top: 280px; }
+        .sub-service h2 { color: var(--secondary-color); margin-bottom: 1rem; font-size: 2rem; }
+        .sub-service h3 { color: var(--text-color); margin-top: 1.5rem; margin-bottom: 0.75rem; }
+        .sub-service p { color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem; }
+        .sub-service ul { margin-left: 2rem; color: var(--text-muted); }
+        .sub-service ul li { margin-bottom: 0.75rem; }
+        .service-nav { background: var(--bg-card); padding: 2rem; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 3rem; position: sticky; top: 100px; z-index: 100; }
+        .service-nav h3 { color: var(--secondary-color); margin-bottom: 1rem; }
+        .service-nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 1rem; }
+        .service-nav a { color: var(--text-muted); text-decoration: none; padding: 0.5rem 1rem; border: 1px solid var(--border-color); border-radius: 5px; transition: all 0.3s ease; display: block; }
+        .service-nav a:hover { background: var(--secondary-color); color: var(--primary-color); }
+        @media (max-width: 768px) { .service-hero h1 { font-size: 2rem; } .service-nav { position: static; } }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo"><a href="../index.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit;"><span class="logo-icon">🛡️</span><span class="logo-text">TestCorp</span></a></div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#services">Services</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../careers.html">Careers</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="service-page">
+        <div class="service-hero">
+            <h1>Software Testing Services</h1>
+            <p>Comprehensive quality assurance testing to ensure your software meets the highest standards of functionality, performance, and reliability.</p>
+        </div>
+
+        <div class="service-content">
+            <div class="service-nav">
+                <h3>Our Software Testing Services:</h3>
+                <ul>
+                    <li><a href="#functional">Functional Testing</a></li>
+                    <li><a href="#performance">Performance Testing</a></li>
+                    <li><a href="#automated">Automated Testing</a></li>
+                    <li><a href="#regression">Regression Testing</a></li>
+                    <li><a href="#integration">Integration Testing</a></li>
+                    <li><a href="#uat">User Acceptance Testing</a></li>
+                </ul>
+            </div>
+
+            <div class="sub-services">
+                <div id="functional" class="sub-service">
+                    <h2>Functional Testing</h2>
+                    <p>Functional testing validates that your software functions according to requirements and specifications. We test each feature to ensure it performs as expected under various conditions.</p>
+                    <h3>What We Test:</h3>
+                    <ul>
+                        <li>User interface functionality and navigation</li>
+                        <li>Database operations and data integrity</li>
+                        <li>API and web services functionality</li>
+                        <li>Business logic and workflows</li>
+                        <li>Error handling and validation</li>
+                        <li>Form submissions and data processing</li>
+                    </ul>
+                    <h3>Deliverables:</h3>
+                    <ul>
+                        <li>Detailed test cases and test scripts</li>
+                        <li>Test execution reports with pass/fail status</li>
+                        <li>Defect reports with severity classification</li>
+                        <li>Recommendations for improvements</li>
+                    </ul>
+                </div>
+
+                <div id="performance" class="sub-service">
+                    <h2>Performance Testing</h2>
+                    <p>Performance testing ensures your application can handle expected user loads and performs optimally under various conditions. We identify bottlenecks before they impact your users.</p>
+                    <h3>Testing Types:</h3>
+                    <ul>
+                        <li><strong>Load Testing:</strong> Verify system behavior under expected load</li>
+                        <li><strong>Stress Testing:</strong> Determine breaking points and system limits</li>
+                        <li><strong>Spike Testing:</strong> Test sudden increases in user traffic</li>
+                        <li><strong>Endurance Testing:</strong> Long-term performance under sustained load</li>
+                        <li><strong>Scalability Testing:</strong> Assess ability to scale with growth</li>
+                    </ul>
+                    <h3>Key Metrics:</h3>
+                    <ul>
+                        <li>Response times and latency</li>
+                        <li>Throughput and transactions per second</li>
+                        <li>Resource utilization (CPU, memory, network)</li>
+                        <li>Error rates under load</li>
+                        <li>Database query performance</li>
+                    </ul>
+                </div>
+
+                <div id="automated" class="sub-service">
+                    <h2>Automated Testing</h2>
+                    <p>Automated testing accelerates your testing process, increases coverage, and enables continuous integration/continuous deployment (CI/CD). We create robust, maintainable test automation frameworks.</p>
+                    <h3>Automation Services:</h3>
+                    <ul>
+                        <li>Test automation framework design and implementation</li>
+                        <li>UI/functional test automation (Selenium, Cypress, Playwright)</li>
+                        <li>API test automation (RestAssured, Postman, SoapUI)</li>
+                        <li>CI/CD pipeline integration (Jenkins, GitLab CI, GitHub Actions)</li>
+                        <li>Cross-browser and cross-platform testing</li>
+                        <li>Mobile app test automation (Appium, Espresso, XCUITest)</li>
+                    </ul>
+                    <h3>Benefits:</h3>
+                    <ul>
+                        <li>Faster feedback on code changes</li>
+                        <li>Increased test coverage and consistency</li>
+                        <li>Reduced manual testing effort</li>
+                        <li>Early bug detection in development cycle</li>
+                        <li>Improved software quality and reliability</li>
+                    </ul>
+                </div>
+
+                <div id="regression" class="sub-service">
+                    <h2>Regression Testing</h2>
+                    <p>Regression testing ensures that new code changes, updates, or bug fixes haven't negatively impacted existing functionality. Critical for maintaining software quality across releases.</p>
+                    <h3>Our Approach:</h3>
+                    <ul>
+                        <li>Comprehensive test suite maintenance</li>
+                        <li>Risk-based test case prioritization</li>
+                        <li>Automated regression test execution</li>
+                        <li>Impact analysis for code changes</li>
+                        <li>Continuous regression testing in CI/CD pipelines</li>
+                    </ul>
+                    <h3>Coverage Areas:</h3>
+                    <ul>
+                        <li>Critical business workflows</li>
+                        <li>Core application features</li>
+                        <li>Integration points</li>
+                        <li>Previously identified bug areas</li>
+                        <li>High-risk functionality</li>
+                    </ul>
+                </div>
+
+                <div id="integration" class="sub-service">
+                    <h2>Integration Testing</h2>
+                    <p>Integration testing verifies that different components, modules, or services work together correctly. Essential for modern applications with multiple interconnected systems.</p>
+                    <h3>Testing Scope:</h3>
+                    <ul>
+                        <li>Module-to-module integration</li>
+                        <li>API integration testing</li>
+                        <li>Database integration validation</li>
+                        <li>Third-party service integration</li>
+                        <li>Microservices communication</li>
+                        <li>Data flow across systems</li>
+                    </ul>
+                    <h3>Key Focus Areas:</h3>
+                    <ul>
+                        <li>Data consistency across integrated systems</li>
+                        <li>Error handling at integration points</li>
+                        <li>Performance of integrated components</li>
+                        <li>Security of data exchange</li>
+                        <li>Compatibility between systems</li>
+                    </ul>
+                </div>
+
+                <div id="uat" class="sub-service">
+                    <h2>User Acceptance Testing (UAT)</h2>
+                    <p>UAT validates that the software meets business requirements and is ready for production deployment. We work with stakeholders to ensure the system delivers expected business value.</p>
+                    <h3>UAT Services:</h3>
+                    <ul>
+                        <li>Test scenario and case development based on business requirements</li>
+                        <li>UAT environment setup and configuration</li>
+                        <li>Coordination with business users and stakeholders</li>
+                        <li>UAT execution and defect management</li>
+                        <li>Sign-off documentation and readiness assessment</li>
+                    </ul>
+                    <h3>UAT Process:</h3>
+                    <ul>
+                        <li>Requirement analysis and test planning</li>
+                        <li>Test case creation from user stories</li>
+                        <li>UAT environment preparation</li>
+                        <li>Test execution with business users</li>
+                        <li>Defect tracking and resolution</li>
+                        <li>Final approval and go-live readiness</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="background: var(--bg-card); padding: 3rem; border-radius: 10px; border: 1px solid var(--border-color); margin-top: 3rem; text-align: center;">
+                <h2 style="color: var(--secondary-color); margin-bottom: 1rem;">Ready to Improve Your Software Quality?</h2>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">Contact us to discuss your software testing needs and learn how we can help ensure your application meets the highest quality standards.</p>
+                <a href="../index.html#contact" class="btn btn-primary">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section"><div class="logo"><a href="../index.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit;"><span class="logo-icon">🛡️</span><span class="logo-text">TestCorp</span></a></div><p>Professional security testing services to protect your digital assets.</p></div>
+                <div class="footer-section"><h4>Services</h4><ul><li><a href="software-testing.html">Software Testing</a></li><li><a href="penetration-testing.html">Penetration Testing</a></li><li><a href="red-team.html">Red Team Operations</a></li><li><a href="security-assessment.html">Security Assessment</a></li><li><a href="security-training.html">Security Training</a></li><li><a href="security-consulting.html">Security Consulting</a></li></ul></div>
+                <div class="footer-section"><h4>Company</h4><ul><li><a href="../index.html#about">About Us</a></li><li><a href="../index.html#contact">Contact</a></li><li><a href="../careers.html">Careers</a></li><li><a href="../blog.html">Blog</a></li></ul></div>
+                <div class="footer-section"><h4>Legal</h4><ul><li><a href="../privacy-policy.html">Privacy Policy</a></li><li><a href="../terms-of-service.html">Terms of Service</a></li><li><a href="../responsible-disclosure.html">Responsible Disclosure</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2025 TestCorp. All rights reserved.</p></div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>

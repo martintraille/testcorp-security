@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - TestCorp</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <style>
+        .careers-page {
+            padding-top: 100px;
+            min-height: 100vh;
+        }
+        .careers-hero {
+            text-align: center;
+            padding: 3rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .careers-hero h1 {
+            color: var(--secondary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .careers-hero p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        .careers-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .benefits-section {
+            margin: 3rem 0;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .benefit-card {
+            background-color: var(--bg-card);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary-color);
+        }
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .benefit-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.75rem;
+            font-size: 1.3rem;
+        }
+        .benefit-card p {
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        .section-title {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .section-subtitle {
+            color: var(--text-muted);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        .jobs-section {
+            background-color: var(--bg-card);
+            padding: 3rem 2rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            margin: 3rem 0;
+            text-align: center;
+        }
+        .jobs-section h2 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        .jobs-section p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #52e8c0;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.4);
+        }
+        .values-section {
+            margin: 3rem 0;
+        }
+        .values-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .value-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            background-color: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+        }
+        .value-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+        .value-item h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+        .value-item p {
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--secondary-color);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .back-link:hover {
+            background-color: rgba(100, 255, 218, 0.1);
+            transform: translateX(-5px);
+        }
+        @media (max-width: 768px) {
+            .careers-hero h1 {
+                font-size: 2rem;
+            }
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit;">
+                        <span class="logo-icon">🛡️</span>
+                        <span class="logo-text">TestCorp</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="careers-page">
+        <div class="careers-content">
+            <a href="index.html" class="back-link">← Back to Home</a>
+
+            <div class="careers-hero">
+                <h1>Join Our Team</h1>
+                <p>Help organisations strengthen their security posture while working with cutting-edge technologies and methodologies. At TestCorp, we're building a team of passionate security professionals dedicated to making the digital world safer.</p>
+            </div>
+
+            <!-- Benefits Section -->
+            <div class="benefits-section">
+                <h2 class="section-title">Why Work at TestCorp?</h2>
+                <p class="section-subtitle">We invest in our people and create an environment where security professionals can thrive</p>
+
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🎯</div>
+                        <h3>Challenging Work</h3>
+                        <p>Work on diverse security engagements across multiple industries. Every day brings new challenges and learning opportunities.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">📚</div>
+                        <h3>Continuous Learning</h3>
+                        <p>Access to training, certifications, and conferences. We support your professional development with dedicated learning budgets.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🔧</div>
+                        <h3>Latest Tools & Tech</h3>
+                        <p>Work with cutting-edge security tools and technologies. We invest in the best equipment and software for our team.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">⚖️</div>
+                        <h3>Work-Life Balance</h3>
+                        <p>Flexible working arrangements, including remote work options. We believe in maintaining a healthy work-life balance.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">💰</div>
+                        <h3>Competitive Package</h3>
+                        <p>Competitive salary, pension contributions, and performance bonuses. We reward exceptional work.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🤝</div>
+                        <h3>Collaborative Culture</h3>
+                        <p>Work alongside experienced security professionals in a supportive, collaborative environment.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Values Section -->
+            <div class="values-section">
+                <h2 class="section-title">Our Values</h2>
+                <p class="section-subtitle">What drives us every day</p>
+
+                <div class="values-list">
+                    <div class="value-item">
+                        <div class="value-icon">🛡️</div>
+                        <div>
+                            <h3>Security First</h3>
+                            <p>We're committed to the highest standards of security and ethical conduct in everything we do.</p>
+                        </div>
+                    </div>
+
+                    <div class="value-item">
+                        <div class="value-icon">💡</div>
+                        <div>
+                            <h3>Innovation</h3>
+                            <p>We embrace new technologies and methodologies, constantly evolving to stay ahead of emerging threats.</p>
+                        </div>
+                    </div>
+
+                    <div class="value-item">
+                        <div class="value-icon">🎓</div>
+                        <div>
+                            <h3>Knowledge Sharing</h3>
+                            <p>We believe in sharing knowledge within our team and contributing to the wider security community.</p>
+                        </div>
+                    </div>
+
+                    <div class="value-item">
+                        <div class="value-icon">🌟</div>
+                        <div>
+                            <h3>Excellence</h3>
+                            <p>We strive for excellence in every engagement, delivering value that exceeds client expectations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Current Openings Section -->
+            <div class="jobs-section">
+                <h2>Current Opportunities</h2>
+                <p>We're always looking for talented security professionals to join our team. We're particularly interested in hearing from:</p>
+                <ul style="list-style: none; padding: 0; margin: 1.5rem 0; color: var(--text-muted);">
+                    <li style="margin-bottom: 0.5rem;">✓ Penetration Testers (Junior to Senior)</li>
+                    <li style="margin-bottom: 0.5rem;">✓ Security Consultants</li>
+                    <li style="margin-bottom: 0.5rem;">✓ Red Team Operators</li>
+                    <li style="margin-bottom: 0.5rem;">✓ QA and Software Testing Engineers</li>
+                    <li style="margin-bottom: 0.5rem;">✓ Security Researchers</li>
+                </ul>
+            </div>
+
+            <!-- Application Form Section -->
+            <div style="margin: 3rem 0;">
+                <h2 class="section-title">Apply Now</h2>
+                <p class="section-subtitle">Fill out the form below or email us at <a href="mailto:careers@testcorpltd.com" style="color: var(--secondary-color); text-decoration: none;">careers@testcorpltd.com</a></p>
+
+                <div style="background-color: var(--bg-card); padding: 3rem 2rem; border-radius: 10px; border: 1px solid var(--border-color); max-width: 700px; margin: 0 auto;">
+                    <form class="careers-form" id="careersForm" action="https://formspree.io/f/xnnglrwy" method="POST">
+                        <div style="display: grid; gap: 1.5rem;">
+                            <div>
+                                <label style="display: block; color: var(--text-color); margin-bottom: 0.5rem; font-weight: 500;">Full Name *</label>
+                                <input type="text" name="name" id="career-name" required style="width: 100%; padding: 1rem; border: 1px solid var(--border-color); background-color: var(--primary-color); color: var(--text-color); border-radius: 5px; font-size: 1rem; font-family: inherit;">
+                            </div>
+
+                            <div>
+                                <label style="display: block; color: var(--text-color); margin-bottom: 0.5rem; font-weight: 500;">Email Address *</label>
+                                <input type="email" name="email" id="career-email" required style="width: 100%; padding: 1rem; border: 1px solid var(--border-color); background-color: var(--primary-color); color: var(--text-color); border-radius: 5px; font-size: 1rem; font-family: inherit;">
+                            </div>
+
+                            <div>
+                                <label style="display: block; color: var(--text-color); margin-bottom: 0.5rem; font-weight: 500;">Phone Number</label>
+                                <input type="tel" name="phone" id="career-phone" style="width: 100%; padding: 1rem; border: 1px solid var(--border-color); background-color: var(--primary-color); color: var(--text-color); border-radius: 5px; font-size: 1rem; font-family: inherit;">
+                            </div>
+
+                            <div>
+                                <label style="display: block; color: var(--text-color); margin-bottom: 0.5rem; font-weight: 500;">Position of Interest *</label>
+                                <select name="position" id="career-position" required style="width: 100%; padding: 1rem; border: 1px solid var(--border-color); background-color: var(--primary-color); color: var(--text-color); border-radius: 5px; font-size: 1rem; font-family: inherit; cursor: pointer;">
+                                    <option value="">Select a position</option>
+                                    <option value="Penetration Tester - Junior">Penetration Tester - Junior</option>
+                                    <option value="Penetration Tester - Mid-Level">Penetration Tester - Mid-Level</option>
+                                    <option value="Penetration Tester - Senior">Penetration Tester - Senior</option>
+                                    <option value="Security Consultant">Security Consultant</option>
+                                    <option value="Red Team Operator">Red Team Operator</option>
+                                    <option value="QA / Software Testing Engineer">QA / Software Testing Engineer</option>
+                                    <option value="Security Researcher">Security Researcher</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label style="display: block; color: var(--text-color); margin-bottom: 0.5rem; font-weight: 500;">Years of Experience</label>
+                                <select name="experience" id="career-experience" style="width: 100%; padding: 1rem; border: 1px solid var(--border-color); background-color: var(--primary-color); color: var(--text-color); border-radius: 5px; font-size: 1rem; font-family: inherit; cursor: pointer;">
+                                    <option value="">Select experience level</option>
+                                    <option value="0-1 years">0-1 years</option>
+                                    <option value="1-3 years">1-3 years</option>
+                                    <option value="3-5 years">3-5 years</option>
+                                    <option value="5-10 years">5-10 years</option>
+                                    <option value="10+ years">10+ years</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label style="display: block; color: var(--text-color); margin-bottom: 0.5rem; font-weight: 500;">Certifications</label>
+                                <input type="text" name="certifications" id="career-certs" placeholder="e.g., OSCP, CEH, CISSP, etc." style="width: 100%; padding: 1rem; border: 1px solid var(--border-color); background-color: var(--primary-color); color: var(--text-color); border-radius: 5px; font-size: 1rem; font-family: inherit;">
+                                <small style="color: var(--text-muted); font-size: 0.875rem; margin-top: 0.25rem; display: block;">Separate multiple certifications with commas</small>
+                            </div>
+
+                            <div>
+                                <label style="display: block; color: var(--text-color); margin-bottom: 0.5rem; font-weight: 500;">LinkedIn Profile or Portfolio</label>
+                                <input type="url" name="linkedin" id="career-linkedin" placeholder="https://" style="width: 100%; padding: 1rem; border: 1px solid var(--border-color); background-color: var(--primary-color); color: var(--text-color); border-radius: 5px; font-size: 1rem; font-family: inherit;">
+                            </div>
+
+                            <div>
+                                <label style="display: block; color: var(--text-color); margin-bottom: 0.5rem; font-weight: 500;">Tell Us About Yourself *</label>
+                                <textarea name="message" id="career-message" rows="6" required placeholder="Why are you interested in TestCorp? What makes you a great fit?" style="width: 100%; padding: 1rem; border: 1px solid var(--border-color); background-color: var(--primary-color); color: var(--text-color); border-radius: 5px; font-size: 1rem; font-family: inherit; resize: vertical;"></textarea>
+                            </div>
+
+                            <div style="background-color: rgba(100, 255, 218, 0.1); padding: 1.5rem; border-radius: 5px; border: 2px solid var(--secondary-color);">
+                                <p style="color: var(--text-color); font-size: 1rem; margin: 0 0 0.75rem 0; font-weight: 600;">📎 Important: CV/Resume Required</p>
+                                <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0 0 0.75rem 0; line-height: 1.6;">
+                                    After submitting this form, please email your CV/Resume to <a href="mailto:careers@testcorpltd.com?subject=CV/Resume for Application" style="color: var(--secondary-color); text-decoration: none; font-weight: 600;">careers@testcorpltd.com</a>
+                                </p>
+                                <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">
+                                    Please include your name and the position you're applying for in the email subject line.
+                                </p>
+                            </div>
+
+                            <!-- Hidden field to specify recipient -->
+                            <input type="hidden" name="_replyto" value="careers@testcorpltd.com">
+                            <input type="hidden" name="_subject" value="New Career Application">
+
+                            <!-- Honeypot field for spam protection -->
+                            <input type="text" name="_gotcha" style="display:none">
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                                Submit Application
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <a href="index.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit;">
+                            <span class="logo-icon">🛡️</span>
+                            <span class="logo-text">TestCorp</span>
+                        </a>
+                    </div>
+                    <p>Professional security testing services to protect your digital assets.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#services">Software Testing</a></li>
+                        <li><a href="index.html#services">Penetration Testing</a></li>
+                        <li><a href="index.html#services">Red Team Operations</a></li>
+                        <li><a href="index.html#services">Security Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="responsible-disclosure.html">Responsible Disclosure</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TestCorp. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

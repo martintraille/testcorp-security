@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsible Disclosure Policy - TestCorp</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <style>
+        .legal-page {
+            padding-top: 100px;
+            min-height: 100vh;
+        }
+        .legal-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .legal-content h1 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+        .legal-content h2 {
+            color: var(--secondary-color);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        .legal-content h3 {
+            color: var(--text-color);
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.3rem;
+        }
+        .legal-content p, .legal-content li {
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .legal-content ul, .legal-content ol {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .legal-content a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        .legal-content a:hover {
+            text-decoration: underline;
+        }
+        .last-updated {
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--secondary-color);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .back-link:hover {
+            background-color: rgba(100, 255, 218, 0.1);
+            transform: translateX(-5px);
+        }
+        .highlight-box {
+            background-color: var(--bg-card);
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+        .highlight-box p {
+            margin-bottom: 0.5rem;
+        }
+        .warning-box {
+            background-color: rgba(240, 100, 73, 0.1);
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+        .security-contact {
+            background-color: var(--bg-card);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            margin: 2rem 0;
+        }
+        .security-contact h3 {
+            margin-top: 0;
+        }
+        code {
+            background-color: var(--bg-card);
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit;">
+                        <span class="logo-icon">🛡️</span>
+                        <span class="logo-text">TestCorp</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="legal-page">
+        <div class="legal-content">
+            <a href="index.html" class="back-link">← Back to Home</a>
+
+            <h1>Responsible Disclosure Policy</h1>
+            <p class="last-updated">Last Updated: October 16, 2025</p>
+
+            <div class="highlight-box">
+                <p><strong>Security is core to our business.</strong> At TestCorp, we appreciate the efforts of security researchers and ethical hackers who help us maintain the security of our systems and protect our clients.</p>
+            </div>
+
+            <h2>1. Our Commitment</h2>
+            <p>TestCorp is committed to working with security researchers to verify, reproduce, and respond to legitimate vulnerability reports. We pledge to:</p>
+            <ul>
+                <li>Acknowledge receipt of vulnerability reports promptly</li>
+                <li>Provide regular updates on our progress</li>
+                <li>Work to remediate verified vulnerabilities in a timely manner</li>
+                <li>Recognize researchers who report vulnerabilities responsibly</li>
+                <li>Not pursue legal action against researchers who follow this policy</li>
+            </ul>
+
+            <h2>2. Scope</h2>
+
+            <h3>2.1 In Scope</h3>
+            <p>This policy applies to vulnerabilities discovered in:</p>
+            <ul>
+                <li>TestCorp's primary website and web applications (<code>*.testcorpltd.com</code>)</li>
+                <li>Client-facing portals and services operated by TestCorp</li>
+                <li>TestCorp's API endpoints</li>
+                <li>TestCorp's mobile applications (if applicable)</li>
+                <li>TestCorp's cloud infrastructure and services</li>
+            </ul>
+
+            <h3>2.2 Out of Scope</h3>
+            <p>The following are <strong>NOT</strong> covered by this policy:</p>
+            <ul>
+                <li>Third-party services or websites not controlled by TestCorp</li>
+                <li>Client systems, networks, or applications (report these to the respective client)</li>
+                <li>Social engineering attacks targeting TestCorp employees</li>
+                <li>Physical security vulnerabilities of our offices</li>
+                <li>Denial of Service (DoS/DDoS) attacks</li>
+                <li>Spam or social engineering techniques</li>
+            </ul>
+
+            <h2>3. Safe Harbor</h2>
+            <p>TestCorp considers security research conducted in accordance with this policy as:</p>
+            <ul>
+                <li><strong>Authorized</strong> under the Computer Misuse Act 1990</li>
+                <li><strong>Legitimate</strong> activity for improving security</li>
+                <li><strong>Exempt</strong> from legal action by TestCorp</li>
+            </ul>
+
+            <div class="warning-box">
+                <p><strong>Important:</strong> To maintain Safe Harbor protection, you must:</p>
+                <ul>
+                    <li>Comply with all aspects of this policy</li>
+                    <li>Make a good-faith effort to avoid data destruction or privacy violations</li>
+                    <li>Report vulnerabilities promptly upon discovery</li>
+                    <li>Not exploit vulnerabilities beyond what is necessary to demonstrate the issue</li>
+                </ul>
+            </div>
+
+            <h2>4. Rules of Engagement</h2>
+
+            <h3>4.1 Permitted Activities</h3>
+            <p>You may:</p>
+            <ul>
+                <li>Test security controls in a manner that does not degrade our services</li>
+                <li>Use publicly available tools and techniques</li>
+                <li>Attempt to exploit vulnerabilities to verify their existence</li>
+                <li>Access your own test accounts or data</li>
+            </ul>
+
+            <h3>4.2 Prohibited Activities</h3>
+            <p>You must NOT:</p>
+            <ul>
+                <li>Access, modify, delete, or store data belonging to others</li>
+                <li>Execute Denial of Service (DoS/DDoS) attacks</li>
+                <li>Send unsolicited communications (spam, phishing) to users or employees</li>
+                <li>Exploit vulnerabilities for personal gain or financial benefit</li>
+                <li>Conduct physical attacks against our facilities or personnel</li>
+                <li>Conduct social engineering attacks against employees or contractors</li>
+                <li>Violate privacy or data protection laws</li>
+                <li>Disrupt or degrade our services or user experience</li>
+                <li>Publicly disclose vulnerabilities before we have had reasonable time to address them</li>
+            </ul>
+
+            <h2>5. Reporting Guidelines</h2>
+
+            <h3>5.1 How to Report</h3>
+
+            <div class="security-contact">
+                <h3>Security Contact Information</h3>
+                <p><strong>Primary Contact:</strong><br>
+                Email: <a href="mailto:security@testcorpltd.com">security@testcorpltd.com</a></p>
+
+                <p><strong>PGP Encryption (Recommended for Sensitive Reports):</strong><br>
+                PGP Key Fingerprint: <code>XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX</code><br>
+                <a href="#">Download Public Key</a></p>
+
+                <p><strong>Alternative Contact:</strong><br>
+                If you do not receive a response within 48 hours, contact:<br>
+                <a href="mailto:admin@testcorpltd.com">admin@testcorpltd.com</a></p>
+            </div>
+
+            <h3>5.2 What to Include in Your Report</h3>
+            <p>Please provide as much detail as possible:</p>
+            <ul>
+                <li><strong>Vulnerability Type:</strong> (e.g., XSS, SQL Injection, Authentication Bypass)</li>
+                <li><strong>Affected URL/Endpoint:</strong> Specific location of the vulnerability</li>
+                <li><strong>Proof of Concept:</strong> Step-by-step instructions to reproduce</li>
+                <li><strong>Impact Assessment:</strong> Your analysis of the potential security impact</li>
+                <li><strong>Suggested Remediation:</strong> (Optional) Your recommendations for fixing the issue</li>
+                <li><strong>Discovery Date:</strong> When you discovered the vulnerability</li>
+                <li><strong>Your Contact Information:</strong> Name/handle and email address</li>
+                <li><strong>Supporting Materials:</strong> Screenshots, videos, or code samples (if applicable)</li>
+            </ul>
+
+            <h3>5.3 Encrypted Reporting</h3>
+            <p>For sensitive vulnerabilities, we strongly recommend using PGP encryption. This protects both you and us by ensuring vulnerability details are not intercepted.</p>
+
+            <h2>6. Our Response Process</h2>
+
+            <h3>6.1 Timeline</h3>
+            <ol>
+                <li><strong>Initial Response:</strong> Within 48 hours of report submission</li>
+                <li><strong>Triage:</strong> Within 5 business days, we will assess severity and validity</li>
+                <li><strong>Status Updates:</strong> Every 7-14 days until resolution</li>
+                <li><strong>Resolution:</strong> Timeframe depends on severity:
+                    <ul>
+                        <li>Critical: 7-14 days</li>
+                        <li>High: 30 days</li>
+                        <li>Medium: 60 days</li>
+                        <li>Low: 90 days</li>
+                    </ul>
+                </li>
+                <li><strong>Disclosure:</strong> Coordinated public disclosure (if applicable) after remediation</li>
+            </ol>
+
+            <h3>6.2 Communication</h3>
+            <p>We will:</p>
+            <ul>
+                <li>Confirm receipt of your report within 48 hours</li>
+                <li>Provide our initial assessment of severity and validity</li>
+                <li>Keep you informed throughout the remediation process</li>
+                <li>Notify you when the vulnerability has been resolved</li>
+                <li>Coordinate with you on any public disclosure</li>
+            </ul>
+
+            <h2>7. Vulnerability Severity Classification</h2>
+
+            <h3>Critical Severity</h3>
+            <ul>
+                <li>Remote code execution on production systems</li>
+                <li>SQL injection allowing data extraction or modification</li>
+                <li>Authentication bypass affecting all users</li>
+                <li>Direct access to sensitive client data</li>
+            </ul>
+
+            <h3>High Severity</h3>
+            <ul>
+                <li>Cross-Site Scripting (XSS) with significant impact</li>
+                <li>Cross-Site Request Forgery (CSRF) on sensitive operations</li>
+                <li>Privilege escalation vulnerabilities</li>
+                <li>Information disclosure of credentials or tokens</li>
+            </ul>
+
+            <h3>Medium Severity</h3>
+            <ul>
+                <li>XSS with limited impact</li>
+                <li>Information disclosure of non-sensitive data</li>
+                <li>Security misconfigurations with exploitable impact</li>
+                <li>Subdomain takeover vulnerabilities</li>
+            </ul>
+
+            <h3>Low Severity</h3>
+            <ul>
+                <li>Missing security headers with minimal impact</li>
+                <li>Information disclosure with no direct exploit path</li>
+                <li>Issues requiring significant user interaction or social engineering</li>
+            </ul>
+
+            <h2>8. Recognition</h2>
+            <p>We appreciate security researchers who help us improve our security posture. With your permission, we offer:</p>
+            <ul>
+                <li><strong>Public Acknowledgment:</strong> Recognition on our security acknowledgments page</li>
+                <li><strong>Reference Letter:</strong> Professional reference letter for significant findings</li>
+                <li><strong>CVE Assignment:</strong> Assistance with CVE assignment where appropriate</li>
+            </ul>
+            <p><strong>Note:</strong> TestCorp does not currently offer a bug bounty program, but we may provide recognition and thanks for valuable contributions to our security.</p>
+
+            <h2>9. Disclosure Policy</h2>
+
+            <h3>9.1 Coordinated Disclosure</h3>
+            <p>We believe in coordinated disclosure. Please:</p>
+            <ul>
+                <li>Allow us reasonable time to remediate vulnerabilities before public disclosure</li>
+                <li>Coordinate with us on disclosure timing and content</li>
+                <li>Redact any sensitive information from public disclosures</li>
+            </ul>
+
+            <h3>9.2 Public Disclosure Timeline</h3>
+            <ul>
+                <li>We aim to remediate critical vulnerabilities within 14 days</li>
+                <li>If we cannot meet remediation timelines, we will communicate openly about delays</li>
+                <li>After 90 days, researchers may proceed with public disclosure at their discretion</li>
+                <li>Earlier disclosure may be appropriate if the vulnerability is being actively exploited</li>
+            </ul>
+
+            <h2>10. Legal Considerations</h2>
+
+            <h3>10.1 UK Legal Framework</h3>
+            <p>This policy is designed to comply with:</p>
+            <ul>
+                <li><strong>Computer Misuse Act 1990:</strong> Authorizing security research activities</li>
+                <li><strong>Data Protection Act 2018:</strong> Protecting personal data discovered during research</li>
+                <li><strong>Regulation of Investigatory Powers Act 2000:</strong> Lawful interception considerations</li>
+            </ul>
+
+            <h3>10.2 Data Protection</h3>
+            <p>If you discover personal data during your research:</p>
+            <ul>
+                <li>Do not access, download, modify, or store the data</li>
+                <li>Report the vulnerability immediately</li>
+                <li>Provide only the minimum information necessary to demonstrate the issue</li>
+                <li>Delete any inadvertently accessed data immediately</li>
+            </ul>
+
+            <h2>11. Out of Scope Issues</h2>
+            <p>While we appreciate all reports, the following are typically considered out of scope:</p>
+            <ul>
+                <li>Missing security headers with no demonstrated impact</li>
+                <li>Clickjacking on pages with no sensitive actions</li>
+                <li>Issues requiring physical access to user devices</li>
+                <li>Vulnerabilities requiring MITM or physical network access</li>
+                <li>Social engineering reports without technical vulnerability</li>
+                <li>Reports from automated tools without validation</li>
+                <li>Issues in third-party libraries or frameworks (report to the vendor)</li>
+                <li>Theoretical vulnerabilities without proof of concept</li>
+            </ul>
+
+            <h2>12. Questions and Feedback</h2>
+            <p>If you have questions about this policy or need clarification on scope, please contact:</p>
+            <p>
+                <strong>Security Team</strong><br>
+                Email: <a href="mailto:security@testcorpltd.com">security@testcorpltd.com</a>
+            </p>
+            <p>We welcome feedback on this policy and will update it periodically to reflect best practices and community input.</p>
+
+            <h2>13. Additional Resources</h2>
+            <ul>
+                <li><a href="https://www.ncsc.gov.uk/information/vulnerability-reporting" target="_blank">NCSC Vulnerability Reporting Guidance</a></li>
+                <li><a href="https://www.iso.org/standard/72311.html" target="_blank">ISO/IEC 29147:2018 - Vulnerability Disclosure</a></li>
+                <li><a href="https://disclose.io/" target="_blank">Disclose.io - Industry Standard</a></li>
+            </ul>
+
+            <div class="highlight-box">
+                <p><strong>Thank you for helping keep TestCorp and our clients secure!</strong></p>
+                <p>Responsible security research is essential to the security ecosystem. We value your contributions and look forward to working with the security community.</p>
+            </div>
+
+            <h2>14. Contact Information</h2>
+            <p>
+                <strong>TestCorp Ltd</strong><br>
+                Kingfisher House<br>
+                21-23 Elmfield Road<br>
+                Bromley, Kent<br>
+                BR1 1LT<br>
+                United Kingdom<br><br>
+                Security Email: <a href="mailto:security@testcorpltd.com">security@testcorpltd.com</a><br>
+                General Email: <a href="mailto:admin@testcorpltd.com">admin@testcorpltd.com</a><br>
+                Phone: +1 (555) 123-4567
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <a href="index.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit;">
+                            <span class="logo-icon">🛡️</span>
+                            <span class="logo-text">TestCorp</span>
+                        </a>
+                    </div>
+                    <p>Professional security testing services to protect your digital assets.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#services">Software Testing</a></li>
+                        <li><a href="index.html#services">Penetration Testing</a></li>
+                        <li><a href="index.html#services">Red Team Operations</a></li>
+                        <li><a href="index.html#services">Security Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="responsible-disclosure.html">Responsible Disclosure</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TestCorp. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

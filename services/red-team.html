@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Team Operations - TestCorp</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../animations.css">
+    <style>
+        .service-page { padding-top: 100px; min-height: 100vh; }
+        .service-hero { text-align: center; padding: 3rem 2rem; background: linear-gradient(135deg, var(--bg-dark) 0%, var(--primary-color) 100%); }
+        .service-hero h1 { color: var(--secondary-color); font-size: 3rem; margin-bottom: 1rem; }
+        .service-hero p { color: var(--text-muted); font-size: 1.3rem; max-width: 800px; margin: 0 auto; }
+        .service-content { max-width: 1200px; margin: 0 auto; padding: 3rem 2rem; }
+        .sub-services { display: grid; gap: 3rem; margin-top: 3rem; }
+        .sub-service { background: var(--bg-card); padding: 2rem; border-radius: 10px; border: 1px solid var(--border-color); scroll-margin-top: 280px; }
+        .sub-service h2 { color: var(--secondary-color); margin-bottom: 1rem; font-size: 2rem; }
+        .sub-service h3 { color: var(--text-color); margin-top: 1.5rem; margin-bottom: 0.75rem; }
+        .sub-service p { color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem; }
+        .sub-service ul { margin-left: 2rem; color: var(--text-muted); }
+        .sub-service ul li { margin-bottom: 0.75rem; }
+        .service-nav { background: var(--bg-card); padding: 2rem; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 3rem; position: sticky; top: 100px; z-index: 100; }
+        .service-nav h3 { color: var(--secondary-color); margin-bottom: 1rem; }
+        .service-nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 1rem; }
+        .service-nav a { color: var(--text-muted); text-decoration: none; padding: 0.5rem 1rem; border: 1px solid var(--border-color); border-radius: 5px; transition: all 0.3s ease; display: block; }
+        .service-nav a:hover { background: var(--secondary-color); color: var(--primary-color); }
+        @media (max-width: 768px) { .service-hero h1 { font-size: 2rem; } .service-nav { position: static; } }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo"><a href="../index.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit;"><span class="logo-icon">🛡️</span><span class="logo-text">TestCorp</span></a></div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#services">Services</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../careers.html">Careers</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="service-page">
+        <div class="service-hero">
+            <h1>Red Team Operations</h1>
+            <p>Adversarial security assessments that simulate real-world threat actors. Our red team exercises test your organization's detection, response, and defense capabilities against sophisticated attacks.</p>
+        </div>
+
+        <div class="service-content">
+            <div class="service-nav">
+                <h3>Our Red Team Services:</h3>
+                <ul>
+                    <li><a href="#full-scope">Full Scope Red Team Assessment</a></li>
+                    <li><a href="#assumed-breach">Assumed Breach Scenarios</a></li>
+                    <li><a href="#social-engineering">Social Engineering Campaigns</a></li>
+                    <li><a href="#physical">Physical Security Testing</a></li>
+                    <li><a href="#purple-team">Purple Team Exercises</a></li>
+                    <li><a href="#threat-emulation">Threat Actor Emulation</a></li>
+                </ul>
+            </div>
+
+            <div class="sub-services">
+                <div id="full-scope" class="sub-service">
+                    <h2>Full Scope Red Team Assessment</h2>
+                    <p>Comprehensive adversarial simulation with minimal restrictions, targeting multiple attack vectors to achieve specific objectives such as data exfiltration or domain compromise.</p>
+                    <h3>Assessment Phases:</h3>
+                    <ul>
+                        <li><strong>Reconnaissance:</strong> OSINT gathering, target profiling, attack surface mapping</li>
+                        <li><strong>Initial Access:</strong> Phishing, exploitation, credential compromise</li>
+                        <li><strong>Persistence:</strong> Establishing backdoors and maintaining access</li>
+                        <li><strong>Privilege Escalation:</strong> Gaining elevated permissions and system access</li>
+                        <li><strong>Lateral Movement:</strong> Moving through the network to reach objectives</li>
+                        <li><strong>Objective Achievement:</strong> Data exfiltration, credential theft, or system compromise</li>
+                    </ul>
+                    <h3>Key Benefits:</h3>
+                    <ul>
+                        <li>Tests detection and response capabilities in realistic scenarios</li>
+                        <li>Identifies security control gaps and blind spots</li>
+                        <li>Validates incident response procedures</li>
+                        <li>Measures SOC/Blue Team effectiveness</li>
+                        <li>Provides actionable intelligence for security improvements</li>
+                    </ul>
+                </div>
+
+                <div id="assumed-breach" class="sub-service">
+                    <h2>Assumed Breach Scenarios</h2>
+                    <p>Simulation starting from an already-compromised position to test internal defenses, detection capabilities, and lateral movement prevention.</p>
+                    <h3>Scenario Types:</h3>
+                    <ul>
+                        <li><strong>Compromised User Account:</strong> Starting with stolen credentials</li>
+                        <li><strong>Compromised Workstation:</strong> Beginning with endpoint access</li>
+                        <li><strong>Insider Threat:</strong> Simulating malicious insider activity</li>
+                        <li><strong>Supply Chain Compromise:</strong> Testing third-party access controls</li>
+                        <li><strong>Cloud Breach:</strong> Starting from compromised cloud credentials</li>
+                    </ul>
+                    <h3>Focus Areas:</h3>
+                    <ul>
+                        <li>Internal network segmentation effectiveness</li>
+                        <li>Lateral movement detection and prevention</li>
+                        <li>Privileged access management controls</li>
+                        <li>Data Loss Prevention (DLP) effectiveness</li>
+                        <li>Endpoint Detection and Response (EDR) capabilities</li>
+                    </ul>
+                </div>
+
+                <div id="social-engineering" class="sub-service">
+                    <h2>Social Engineering Campaigns</h2>
+                    <p>Targeted social engineering operations to test employee security awareness and the effectiveness of security training programs.</p>
+                    <h3>Campaign Types:</h3>
+                    <ul>
+                        <li><strong>Phishing Campaigns:</strong> Email-based attacks with credential harvesting or malware delivery</li>
+                        <li><strong>Spear Phishing:</strong> Highly targeted attacks against specific individuals</li>
+                        <li><strong>Vishing:</strong> Voice-based social engineering over phone</li>
+                        <li><strong>Smishing:</strong> SMS/text message-based attacks</li>
+                        <li><strong>Pretexting:</strong> Creating scenarios to extract information</li>
+                        <li><strong>Baiting:</strong> Physical media drops (USB drives, QR codes)</li>
+                    </ul>
+                    <h3>Campaign Execution:</h3>
+                    <ul>
+                        <li>Pre-campaign reconnaissance and target profiling</li>
+                        <li>Custom phishing page development</li>
+                        <li>Realistic payload creation and delivery</li>
+                        <li>User interaction tracking and reporting</li>
+                        <li>Security awareness training recommendations</li>
+                    </ul>
+                </div>
+
+                <div id="physical" class="sub-service">
+                    <h2>Physical Security Testing</h2>
+                    <p>Assessment of physical security controls through unauthorized access attempts, tailgating, badge cloning, and other physical attack vectors.</p>
+                    <h3>Testing Services:</h3>
+                    <ul>
+                        <li>Unauthorized facility access attempts</li>
+                        <li>Tailgating and piggybacking scenarios</li>
+                        <li>Badge cloning and credential bypass</li>
+                        <li>Lock picking and physical bypass testing</li>
+                        <li>Security camera blind spot identification</li>
+                        <li>Dumpster diving and physical OSINT</li>
+                        <li>Security guard and reception desk testing</li>
+                    </ul>
+                    <h3>Objectives:</h3>
+                    <ul>
+                        <li>Gain physical access to restricted areas</li>
+                        <li>Deploy physical implants (WiFi pineapples, keyloggers)</li>
+                        <li>Access sensitive documents or hardware</li>
+                        <li>Test security personnel response and awareness</li>
+                        <li>Identify weaknesses in physical access controls</li>
+                    </ul>
+                </div>
+
+                <div id="purple-team" class="sub-service">
+                    <h2>Purple Team Exercises</h2>
+                    <p>Collaborative security exercises combining offensive (red team) and defensive (blue team) capabilities to improve detection, response, and overall security posture.</p>
+                    <h3>Exercise Structure:</h3>
+                    <ul>
+                        <li><strong>Planning Phase:</strong> Define objectives, scenarios, and success criteria</li>
+                        <li><strong>Execution Phase:</strong> Red team executes attacks while blue team detects and responds</li>
+                        <li><strong>Collaboration Phase:</strong> Real-time knowledge sharing between teams</li>
+                        <li><strong>Analysis Phase:</strong> Joint review of techniques, detections, and gaps</li>
+                        <li><strong>Improvement Phase:</strong> Implement enhanced detections and responses</li>
+                    </ul>
+                    <h3>Key Outcomes:</h3>
+                    <ul>
+                        <li>Improved detection rule creation and tuning</li>
+                        <li>Enhanced SOC analyst skills and capabilities</li>
+                        <li>Better understanding of attacker techniques</li>
+                        <li>Validated security control effectiveness</li>
+                        <li>Accelerated security maturity improvement</li>
+                    </ul>
+                </div>
+
+                <div id="threat-emulation" class="sub-service">
+                    <h2>Threat Actor Emulation</h2>
+                    <p>Simulation of specific threat actors, Advanced Persistent Threats (APTs), or ransomware groups to test defenses against known tactics, techniques, and procedures (TTPs).</p>
+                    <h3>Emulation Services:</h3>
+                    <ul>
+                        <li>APT group emulation (APT29, APT28, Lazarus Group, etc.)</li>
+                        <li>Ransomware attack simulation (without actual encryption)</li>
+                        <li>Nation-state threat actor TTPs</li>
+                        <li>Industry-specific threat scenarios</li>
+                        <li>MITRE ATT&CK framework-based testing</li>
+                    </ul>
+                    <h3>Emulation Process:</h3>
+                    <ul>
+                        <li>Threat intelligence gathering and analysis</li>
+                        <li>TTP mapping to MITRE ATT&CK framework</li>
+                        <li>Custom tool and malware development</li>
+                        <li>Realistic attack chain execution</li>
+                        <li>Detection gap identification</li>
+                        <li>Threat-specific defensive recommendations</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="background: var(--bg-card); padding: 3rem; border-radius: 10px; border: 1px solid var(--border-color); margin-top: 3rem; text-align: center;">
+                <h2 style="color: var(--secondary-color); margin-bottom: 1rem;">Test Your Defenses Against Real Threats</h2>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">Contact us to discuss red team operations and learn how we can help validate your security controls and detection capabilities.</p>
+                <a href="../index.html#contact" class="btn btn-primary">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section"><div class="logo"><a href="../index.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit;"><span class="logo-icon">🛡️</span><span class="logo-text">TestCorp</span></a></div><p>Professional security testing services to protect your digital assets.</p></div>
+                <div class="footer-section"><h4>Services</h4><ul><li><a href="software-testing.html">Software Testing</a></li><li><a href="penetration-testing.html">Penetration Testing</a></li><li><a href="red-team.html">Red Team Operations</a></li><li><a href="security-assessment.html">Security Assessment</a></li><li><a href="security-training.html">Security Training</a></li><li><a href="security-consulting.html">Security Consulting</a></li></ul></div>
+                <div class="footer-section"><h4>Company</h4><ul><li><a href="../index.html#about">About Us</a></li><li><a href="../index.html#contact">Contact</a></li><li><a href="../careers.html">Careers</a></li><li><a href="../blog.html">Blog</a></li></ul></div>
+                <div class="footer-section"><h4>Legal</h4><ul><li><a href="../privacy-policy.html">Privacy Policy</a></li><li><a href="../terms-of-service.html">Terms of Service</a></li><li><a href="../responsible-disclosure.html">Responsible Disclosure</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2025 TestCorp. All rights reserved.</p></div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>

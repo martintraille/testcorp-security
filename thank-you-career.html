@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Submitted - TestCorp</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <style>
+        .thank-you-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 80px;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--primary-color) 100%);
+        }
+        .thank-you-content {
+            max-width: 700px;
+            text-align: center;
+            padding: 3rem 2rem;
+            background-color: var(--bg-card);
+            border-radius: 15px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+        }
+        .success-icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            animation: scaleIn 0.5s ease-out;
+        }
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        .thank-you-content h1 {
+            color: var(--secondary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .thank-you-content p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        .next-steps {
+            background-color: var(--primary-color);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            margin: 2rem 0;
+            text-align: left;
+        }
+        .next-steps h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .next-steps ul {
+            list-style: none;
+            padding: 0;
+        }
+        .next-steps li {
+            color: var(--text-muted);
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .next-steps li:last-child {
+            border-bottom: none;
+        }
+        .next-steps li::before {
+            content: '✓';
+            color: var(--secondary-color);
+            font-weight: bold;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+        .cv-reminder {
+            background-color: rgba(100, 255, 218, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 2px solid var(--secondary-color);
+            margin: 2rem 0;
+        }
+        .cv-reminder p {
+            margin: 0 0 1rem 0;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+        .email-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        .email-button:hover {
+            background-color: #52e8c0;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.4);
+        }
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        .btn-secondary {
+            padding: 1rem 2rem;
+            background-color: transparent;
+            color: var(--secondary-color);
+            border: 2px solid var(--secondary-color);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: rgba(100, 255, 218, 0.1);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit;">
+                        <span class="logo-icon">🛡️</span>
+                        <span class="logo-text">TestCorp</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="thank-you-page">
+        <div class="thank-you-content">
+            <div class="success-icon">✓</div>
+            <h1>Application Received!</h1>
+            <p>Thank you for your interest in joining the TestCorp team. We've successfully received your application.</p>
+
+            <div class="cv-reminder">
+                <p>📎 Don't Forget: Send Your CV/Resume</p>
+                <p style="color: var(--text-muted); font-size: 0.95rem; font-weight: normal; margin-bottom: 1.5rem;">
+                    To complete your application, please email your CV/Resume to careers@testcorpltd.com
+                </p>
+                <a href="mailto:careers@testcorpltd.com?subject=CV/Resume for Application" class="email-button">
+                    <span>📧</span> Email CV/Resume Now
+                </a>
+            </div>
+
+            <div class="next-steps">
+                <h3>What Happens Next?</h3>
+                <ul>
+                    <li>Our recruitment team will review your application within 5-7 business days</li>
+                    <li>If your profile matches our requirements, we'll contact you for an initial interview</li>
+                    <li>The interview process typically includes technical assessments and team discussions</li>
+                    <li>We'll keep you informed throughout the entire process</li>
+                </ul>
+            </div>
+
+            <div class="action-buttons">
+                <a href="careers.html" class="btn-secondary">View Open Positions</a>
+                <a href="index.html" class="btn-secondary">Return Home</a>
+            </div>
+
+            <p style="margin-top: 2rem; font-size: 0.9rem;">
+                Questions? Contact us at <a href="mailto:careers@testcorpltd.com" style="color: var(--secondary-color); text-decoration: none;">careers@testcorpltd.com</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <span class="logo-icon">🛡️</span>
+                        <span class="logo-text">TestCorp</span>
+                    </div>
+                    <p>Professional security testing services to protect your digital assets.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#services">Software Testing</a></li>
+                        <li><a href="index.html#services">Penetration Testing</a></li>
+                        <li><a href="index.html#services">Red Team Operations</a></li>
+                        <li><a href="index.html#services">Security Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="responsible-disclosure.html">Responsible Disclosure</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TestCorp. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

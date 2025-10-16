@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestCorp - Security Testing & Red Team Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit;">
+                        <span class="logo-icon">🛡️</span>
+                        <span class="logo-text">TestCorp</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Secure Your Digital Future</h1>
+                <p class="hero-subtitle">Professional Software Testing, Penetration Testing & Red Team Operations</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary">Our Services</a>
+                    <a href="#contact" class="btn btn-secondary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Comprehensive security testing solutions to protect your organization</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="9" y1="15" x2="15" y2="15"></line>
+                            <line x1="12" y1="18" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h3><a href="services/software-testing.html" style="color: inherit; text-decoration: none;">Software Testing</a></h3>
+                    <p>Comprehensive quality assurance testing including functional, performance, and regression testing to ensure your software meets the highest standards.</p>
+                    <ul class="service-features">
+                        <li><a href="services/software-testing.html#functional">Functional Testing</a></li>
+                        <li><a href="services/software-testing.html#performance">Performance Testing</a></li>
+                        <li><a href="services/software-testing.html#automated">Automated Testing</a></li>
+                        <li><a href="services/software-testing.html#regression">Regression Testing</a></li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            <circle cx="12" cy="16" r="1"></circle>
+                        </svg>
+                    </div>
+                    <h3><a href="services/penetration-testing.html" style="color: inherit; text-decoration: none;">Penetration Testing</a></h3>
+                    <p>Identify vulnerabilities before attackers do. Our ethical hackers simulate real-world attacks to uncover security weaknesses in your systems.</p>
+                    <ul class="service-features">
+                        <li><a href="services/penetration-testing.html#web-app">Web Application Testing</a></li>
+                        <li><a href="services/penetration-testing.html#network">Network Penetration Testing</a></li>
+                        <li><a href="services/penetration-testing.html#mobile-app">Mobile App Security</a></li>
+                        <li><a href="services/penetration-testing.html#api">API Security Testing</a></li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                            <line x1="12" y1="22" x2="12" y2="17"></line>
+                        </svg>
+                    </div>
+                    <h3><a href="services/red-team.html" style="color: inherit; text-decoration: none;">Red Team Operations</a></h3>
+                    <p>Advanced adversary simulation exercises to test your organization's detection and response capabilities against sophisticated threats.</p>
+                    <ul class="service-features">
+                        <li><a href="services/red-team.html#full-scope">Adversary Simulation</a></li>
+                        <li><a href="services/red-team.html#social-engineering">Social Engineering</a></li>
+                        <li><a href="services/red-team.html#physical">Physical Security Testing</a></li>
+                        <li><a href="services/red-team.html#purple-team">Purple Team Exercises</a></li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <path d="M9 12l2 2 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3><a href="services/security-assessment.html" style="color: inherit; text-decoration: none;">Security Assessments</a></h3>
+                    <p>Comprehensive security audits and compliance assessments to ensure your organization meets industry standards and regulatory requirements.</p>
+                    <ul class="service-features">
+                        <li><a href="services/security-assessment.html#vulnerability">Vulnerability Assessments</a></li>
+                        <li><a href="services/security-assessment.html#compliance">Compliance Audits</a></li>
+                        <li><a href="services/security-assessment.html#architecture">Architecture Review</a></li>
+                        <li><a href="services/security-assessment.html#risk">Risk Analysis</a></li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                            <line x1="12" y1="21" x2="12" y2="7"></line>
+                        </svg>
+                    </div>
+                    <h3><a href="services/security-training.html" style="color: inherit; text-decoration: none;">Security Training</a></h3>
+                    <p>Empower your team with knowledge. We provide customized security awareness training and technical workshops for developers and security teams.</p>
+                    <ul class="service-features">
+                        <li><a href="services/security-training.html#awareness">Security Awareness Training</a></li>
+                        <li><a href="services/security-training.html#secure-dev">Secure Development Training</a></li>
+                        <li><a href="services/security-training.html#incident-response">Incident Response Training</a></li>
+                        <li><a href="services/security-training.html#custom">Custom Training Programs</a></li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                    </div>
+                    <h3><a href="services/security-consulting.html" style="color: inherit; text-decoration: none;">Security Consulting</a></h3>
+                    <p>Strategic security guidance to help you build and maintain a robust security program aligned with your business objectives.</p>
+                    <ul class="service-features">
+                        <li><a href="services/security-consulting.html#strategy">Security Strategy</a></li>
+                        <li><a href="services/security-consulting.html#program">Program Development</a></li>
+                        <li><a href="services/security-consulting.html#virtual-ciso">Virtual CISO</a></li>
+                        <li><a href="services/security-consulting.html#devsecops">DevSecOps</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About TestCorp</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Your Trusted Security Partner</h3>
+                    <p>TestCorp is a leading provider of software testing and security services. Our team of experienced security professionals and quality assurance experts help organizations identify vulnerabilities, improve software quality, and strengthen their security posture.</p>
+                    <p>With years of experience in offensive security and software testing, we understand both the attacker's mindset and the importance of delivering high-quality software. Our comprehensive approach ensures that your systems are not only functional but also secure against evolving threats.</p>
+
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">150+</div>
+                            <div class="stat-label">Satisfied Clients</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-features">
+                    <h3>Why Choose TestCorp?</h3>
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <div>
+                                <h4>Certified Experts</h4>
+                                <p>Our team holds industry-leading certifications including OSCP, OSWE, CEH, and CISSP</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <div>
+                                <h4>Proven Methodology</h4>
+                                <p>We follow industry standards including OWASP, PTES, and NIST frameworks</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <div>
+                                <h4>Comprehensive Reports</h4>
+                                <p>Detailed findings with actionable remediation guidance and executive summaries</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <div>
+                                <h4>Confidentiality Guaranteed</h4>
+                                <p>Strict NDAs and secure handling of all sensitive information</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Ready to strengthen your security posture? Contact us today.</p>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>enquiries@testcorpltd.com</p>
+                            <a href="mailto:enquiries@testcorpltd.com?subject=Security%20Services%20Inquiry" class="contact-action-link">
+                                <span class="action-icon">✉️</span> Send Email
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+44 7738 620346</p>
+                            <a href="tel:+447738620346" class="contact-action-link">
+                                <span class="action-icon">📱</span> Call Now
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Kingfisher House,<br>21-23 Elmfield Road,<br>Bromley,<br>Kent,<br>BR1 1LT</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Kingfisher+House+21-23+Elmfield+Road+Bromley+Kent+BR1+1LT" target="_blank" class="map-link">
+                                <span class="map-icon">🗺️</span> View on Google Maps
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.076!2d0.016358!3d51.405966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a9a3b3c7e5c9%3A0x7e8a8e8e8e8e8e8e!2sKingfisher%20House%2C%2021-23%20Elmfield%20Rd%2C%20Bromley%20BR1%201LT!5e0!3m2!1sen!2suk!4v1647890123456"
+                            width="100%"
+                            height="300"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="TestCorp Location Map">
+                        </iframe>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/xdkwyjbq" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="service" id="service" required>
+                            <option value="">Select a Service</option>
+                            <option value="software-testing">Software Testing</option>
+                            <option value="penetration-testing">Penetration Testing</option>
+                            <option value="red-team">Red Team Operations</option>
+                            <option value="assessment">Security Assessment</option>
+                            <option value="training">Security Training</option>
+                            <option value="consulting">Security Consulting</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" id="message" rows="5" placeholder="Tell us about your project" required></textarea>
+                    </div>
+                    <!-- Hidden fields -->
+                    <input type="hidden" name="_replyto" value="admin@testcorpltd.com">
+                    <input type="hidden" name="_subject" value="New Contact Form Submission">
+                    <input type="text" name="_gotcha" style="display:none">
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <a href="index.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit;">
+                            <span class="logo-icon">🛡️</span>
+                            <span class="logo-text">TestCorp</span>
+                        </a>
+                    </div>
+                    <p>Professional security testing services to protect your digital assets.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services/software-testing.html">Software Testing</a></li>
+                        <li><a href="services/penetration-testing.html">Penetration Testing</a></li>
+                        <li><a href="services/red-team.html">Red Team Operations</a></li>
+                        <li><a href="services/security-assessment.html">Security Assessment</a></li>
+                        <li><a href="services/security-training.html">Security Training</a></li>
+                        <li><a href="services/security-consulting.html">Security Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="responsible-disclosure.html">Responsible Disclosure</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TestCorp. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
