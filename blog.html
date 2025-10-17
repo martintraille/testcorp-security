@@ -123,6 +123,22 @@
             color: var(--secondary-color);
             margin-bottom: 1rem;
         }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--secondary-color);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .back-link:hover {
+            background-color: rgba(100, 255, 218, 0.1);
+            transform: translateX(-5px);
+        }
         @media (max-width: 768px) {
             .blog-grid {
                 grid-template-columns: 1fr;
@@ -149,13 +165,23 @@
                     <li><a href="index.html#services">Services</a></li>
                     <li><a href="index.html#about">About</a></li>
                     <li><a href="careers.html">Careers</a></li>
+                    <li><a href="blog.html">Blog</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </nav>
     </header>
 
     <section class="blog-page">
+        <div class="blog-container">
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+
         <div class="blog-hero">
             <h1>Security Insights & Updates</h1>
             <p>Expert perspectives on cybersecurity, penetration testing, and the latest security trends from the TestCorp team.</p>
@@ -167,7 +193,13 @@
                 <!-- BLOG POST 1 - Sample Article -->
                 <!-- To add a new post, copy this entire section and update the content -->
                 <article class="blog-card">
-                    <div class="blog-image">🔒</div>
+                    <div class="blog-image">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            <circle cx="12" cy="16" r="1"></circle>
+                        </svg>
+                    </div>
                     <div class="blog-content">
                         <div class="blog-meta">
                             <span class="blog-date">10 October 2025</span>
@@ -181,7 +213,14 @@
 
                 <!-- BLOG POST 2 - Sample Article -->
                 <article class="blog-card">
-                    <div class="blog-image">🎯</div>
+                    <div class="blog-image">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                            <line x1="12" y1="22" x2="12" y2="17"></line>
+                        </svg>
+                    </div>
                     <div class="blog-content">
                         <div class="blog-meta">
                             <span class="blog-date">5 October 2025</span>
@@ -195,7 +234,12 @@
 
                 <!-- BLOG POST 3 - Sample Article -->
                 <article class="blog-card">
-                    <div class="blog-image">⚡</div>
+                    <div class="blog-image">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <path d="M9 12l2 2 4-4"></path>
+                        </svg>
+                    </div>
                     <div class="blog-content">
                         <div class="blog-meta">
                             <span class="blog-date">1 October 2025</span>
