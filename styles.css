@@ -602,28 +602,40 @@ section {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+    .navbar .container {
+        position: relative;
+        flex-wrap: wrap;
+    }
+
     .mobile-menu-toggle {
         display: flex !important;
     }
 
     .nav-menu {
-        display: none !important;
         position: absolute;
-        top: 100%;
+        top: calc(100% + 1rem);
         left: 0;
         right: 0;
+        width: 100%;
         background-color: var(--primary-color);
         flex-direction: column;
-        padding: 1rem;
+        padding: 0;
+        margin: 0;
         gap: 0;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-        z-index: 1000;
+        z-index: 2000;
         border-top: 2px solid var(--secondary-color);
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
     }
 
     .nav-menu.active {
         display: flex !important;
         flex-direction: column;
+        max-height: 500px;
+        opacity: 1;
     }
 
     .nav-menu li {
