@@ -1,28 +1,38 @@
 // Mobile Menu Toggle
-const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-const navMenu = document.querySelector('.nav-menu');
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
 
-if (mobileMenuToggle && navMenu) {
-    // Function to toggle menu
-    const toggleMenu = (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        navMenu.classList.toggle('active');
-        mobileMenuToggle.classList.toggle('active');
-        console.log('Menu toggled:', navMenu.classList.contains('active'));
-    };
+    console.log('DOM loaded. Looking for menu elements...');
+    console.log('Mobile menu toggle found:', !!mobileMenuToggle);
+    console.log('Nav menu found:', !!navMenu);
 
-    // Add both click and touchstart for better mobile support
-    mobileMenuToggle.addEventListener('click', toggleMenu);
-    mobileMenuToggle.addEventListener('touchstart', toggleMenu, { passive: false });
+    if (mobileMenuToggle && navMenu) {
+        // Function to toggle menu
+        const toggleMenu = () => {
+            navMenu.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active');
+            console.log('Menu toggled! Active:', navMenu.classList.contains('active'));
+        };
 
-    console.log('Mobile menu initialized');
-} else {
-    console.warn('Mobile menu elements not found:', {
-        toggle: !!mobileMenuToggle,
-        menu: !!navMenu
-    });
-}
+        // Add click event
+        mobileMenuToggle.addEventListener('click', function(e) {
+            console.log('Click event fired!');
+            toggleMenu();
+        });
+
+        // Add touch event for mobile
+        mobileMenuToggle.addEventListener('touchend', function(e) {
+            console.log('Touch event fired!');
+            e.preventDefault();
+            toggleMenu();
+        });
+
+        console.log('Mobile menu initialized successfully');
+    } else {
+        console.error('Mobile menu elements not found!');
+    }
+});
 
 // Close mobile menu when clicking on a link
 const navLinks = document.querySelectorAll('.nav-menu a');
