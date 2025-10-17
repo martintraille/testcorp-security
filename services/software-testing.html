@@ -13,7 +13,7 @@
         .service-hero p { color: var(--text-muted); font-size: 1.3rem; max-width: 800px; margin: 0 auto; }
         .service-content { max-width: 1200px; margin: 0 auto; padding: 3rem 2rem; }
         .sub-services { display: grid; gap: 3rem; margin-top: 3rem; }
-        .sub-service { background: var(--bg-card); padding: 2rem; border-radius: 10px; border: 1px solid var(--border-color); scroll-margin-top: 280px; }
+        .sub-service { background: var(--bg-card); padding: 2rem; border-radius: 10px; border: 1px solid var(--border-color); scroll-margin-top: 300px; }
         .sub-service h2 { color: var(--secondary-color); margin-bottom: 1rem; font-size: 2rem; }
         .sub-service h3 { color: var(--text-color); margin-top: 1.5rem; margin-bottom: 0.75rem; }
         .sub-service p { color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem; }
@@ -24,6 +24,7 @@
         .service-nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 1rem; }
         .service-nav a { color: var(--text-muted); text-decoration: none; padding: 0.5rem 1rem; border: 1px solid var(--border-color); border-radius: 5px; transition: all 0.3s ease; display: block; }
         .service-nav a:hover { background: var(--secondary-color); color: var(--primary-color); }
+        .service-nav a.active { background: var(--secondary-color); color: var(--primary-color); }
         @media (max-width: 768px) { .service-hero h1 { font-size: 2rem; } .service-nav { position: static; } }
     </style>
 </head>
@@ -219,5 +220,43 @@
         </div>
     </footer>
     <script src="../script.js"></script>
+    <script>
+        // Service page navigation - update active state on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.service-nav a');
+            const sections = document.querySelectorAll('.sub-service');
+
+            // Handle click to add active state immediately
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Update active state based on scroll position
+            function updateActiveLink() {
+                let currentSection = '';
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 300;
+                    const sectionHeight = section.clientHeight;
+                    if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + currentSection) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', updateActiveLink);
+            updateActiveLink(); // Run on page load
+        });
+    </script>
 </body>
 </html>
