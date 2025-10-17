@@ -55,6 +55,12 @@
         .benefit-icon {
             font-size: 2.5rem;
             margin-bottom: 1rem;
+            color: var(--secondary-color);
+            display: flex;
+            justify-content: center;
+        }
+        .benefit-icon svg {
+            color: var(--secondary-color);
         }
         .benefit-card h3 {
             color: var(--secondary-color);
@@ -132,6 +138,12 @@
         .value-icon {
             font-size: 2rem;
             flex-shrink: 0;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+        }
+        .value-icon svg {
+            color: var(--secondary-color);
         }
         .value-item h3 {
             color: var(--secondary-color);
@@ -211,37 +223,69 @@
 
                 <div class="benefits-grid">
                     <div class="benefit-card">
-                        <div class="benefit-icon">🎯</div>
+                        <div class="benefit-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 6v6l4 2"></path>
+                            </svg>
+                        </div>
                         <h3>Challenging Work</h3>
                         <p>Work on diverse security engagements across multiple industries. Every day brings new challenges and learning opportunities.</p>
                     </div>
 
                     <div class="benefit-card">
-                        <div class="benefit-icon">📚</div>
+                        <div class="benefit-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                                <line x1="12" y1="21" x2="12" y2="7"></line>
+                            </svg>
+                        </div>
                         <h3>Continuous Learning</h3>
                         <p>Access to training, certifications, and conferences. We support your professional development with dedicated learning budgets.</p>
                     </div>
 
                     <div class="benefit-card">
-                        <div class="benefit-icon">🔧</div>
+                        <div class="benefit-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                            </svg>
+                        </div>
                         <h3>Latest Tools & Tech</h3>
                         <p>Work with cutting-edge security tools and technologies. We invest in the best equipment and software for our team.</p>
                     </div>
 
                     <div class="benefit-card">
-                        <div class="benefit-icon">⚖️</div>
+                        <div class="benefit-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
                         <h3>Work-Life Balance</h3>
                         <p>Flexible working arrangements, including remote work options. We believe in maintaining a healthy work-life balance.</p>
                     </div>
 
                     <div class="benefit-card">
-                        <div class="benefit-icon">💰</div>
+                        <div class="benefit-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="1" x2="12" y2="23"></line>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                        </div>
                         <h3>Competitive Package</h3>
                         <p>Competitive salary, pension contributions, and performance bonuses. We reward exceptional work.</p>
                     </div>
 
                     <div class="benefit-card">
-                        <div class="benefit-icon">🤝</div>
+                        <div class="benefit-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
                         <h3>Collaborative Culture</h3>
                         <p>Work alongside experienced security professionals in a supportive, collaborative environment.</p>
                     </div>
@@ -255,7 +299,11 @@
 
                 <div class="values-list">
                     <div class="value-item">
-                        <div class="value-icon">🛡️</div>
+                        <div class="value-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
                         <div>
                             <h3>Security First</h3>
                             <p>We're committed to the highest standards of security and ethical conduct in everything we do.</p>
@@ -263,7 +311,19 @@
                     </div>
 
                     <div class="value-item">
-                        <div class="value-icon">💡</div>
+                        <div class="value-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                        </div>
                         <div>
                             <h3>Innovation</h3>
                             <p>We embrace new technologies and methodologies, constantly evolving to stay ahead of emerging threats.</p>
@@ -271,7 +331,13 @@
                     </div>
 
                     <div class="value-item">
-                        <div class="value-icon">🎓</div>
+                        <div class="value-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                                <line x1="12" y1="21" x2="12" y2="7"></line>
+                            </svg>
+                        </div>
                         <div>
                             <h3>Knowledge Sharing</h3>
                             <p>We believe in sharing knowledge within our team and contributing to the wider security community.</p>
@@ -279,7 +345,11 @@
                     </div>
 
                     <div class="value-item">
-                        <div class="value-icon">🌟</div>
+                        <div class="value-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                        </div>
                         <div>
                             <h3>Excellence</h3>
                             <p>We strive for excellence in every engagement, delivering value that exceeds client expectations.</p>
