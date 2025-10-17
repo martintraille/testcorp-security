@@ -2,10 +2,25 @@
 const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
 const navMenu = document.querySelector('.nav-menu');
 
-if (mobileMenuToggle) {
-    mobileMenuToggle.addEventListener('click', () => {
+if (mobileMenuToggle && navMenu) {
+    // Function to toggle menu
+    const toggleMenu = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
         navMenu.classList.toggle('active');
         mobileMenuToggle.classList.toggle('active');
+        console.log('Menu toggled:', navMenu.classList.contains('active'));
+    };
+
+    // Add both click and touchstart for better mobile support
+    mobileMenuToggle.addEventListener('click', toggleMenu);
+    mobileMenuToggle.addEventListener('touchstart', toggleMenu, { passive: false });
+
+    console.log('Mobile menu initialized');
+} else {
+    console.warn('Mobile menu elements not found:', {
+        toggle: !!mobileMenuToggle,
+        menu: !!navMenu
     });
 }
 
