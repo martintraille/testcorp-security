@@ -14,8 +14,12 @@ document.addEventListener('DOMContentLoaded', function() {
             mobileMenuToggle.classList.toggle('active');
             const isActive = navMenu.classList.contains('active');
             console.log('Menu toggled! Active:', isActive);
-            console.log('Menu display style:', window.getComputedStyle(navMenu).display);
-            console.log('Menu position:', window.getComputedStyle(navMenu).position);
+            const styles = window.getComputedStyle(navMenu);
+            console.log('Menu display:', styles.display);
+            console.log('Menu max-height:', styles.maxHeight);
+            console.log('Menu opacity:', styles.opacity);
+            console.log('Menu flex-direction:', styles.flexDirection);
+            console.log('Menu classes:', navMenu.className);
         };
 
         // Add click event
@@ -31,19 +35,19 @@ document.addEventListener('DOMContentLoaded', function() {
             toggleMenu();
         });
 
+        // Close mobile menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+            });
+        });
+
         console.log('Mobile menu initialized successfully');
     } else {
         console.error('Mobile menu elements not found!');
     }
-});
-
-// Close mobile menu when clicking on a link
-const navLinks = document.querySelectorAll('.nav-menu a');
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        mobileMenuToggle.classList.remove('active');
-    });
 });
 
 // Smooth scroll for navigation links
@@ -193,25 +197,13 @@ function animateCounter(element, target, duration = 2000) {
     updateCounter();
 }
 
-// Observe stats for counter animation
-const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
-            const number = entry.target.querySelector('.stat-number');
-            const target = parseInt(number.textContent);
-            animateCounter(number, target);
-            entry.target.classList.add('counted');
-        }
-    });
-}, { threshold: 0.5 });
-
-const statItems = document.querySelectorAll('.stat-item');
-statItems.forEach(item => statsObserver.observe(item));
+// Stats observer moved to consolidated section below
 
 // Add active state to navigation based on scroll position
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section[id]');
     const scrollY = window.pageYOffset;
+    const allNavLinks = document.querySelectorAll('.nav-menu a');
 
     sections.forEach(section => {
         const sectionHeight = section.offsetHeight;
@@ -220,23 +212,13 @@ window.addEventListener('scroll', () => {
         const navLink = document.querySelector(`.nav-menu a[href="#${sectionId}"]`);
 
         if (navLink && scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            navLinks.forEach(link => link.classList.remove('active'));
+            allNavLinks.forEach(link => link.classList.remove('active'));
             navLink.classList.add('active');
         }
     });
 });
 
-// Add hover effect for service cards
-const serviceCards = document.querySelectorAll('.service-card');
-serviceCards.forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.borderColor = 'var(--secondary-color)';
-    });
-
-    card.addEventListener('mouseleave', function() {
-        this.style.borderColor = 'var(--border-color)';
-    });
-});
+// Hover effect for service cards - moved to consolidated section below
 
 // Prevent form resubmission on page reload
 if (window.history.replaceState) {
