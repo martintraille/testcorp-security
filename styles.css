@@ -609,21 +609,24 @@ section {
 
     .mobile-menu-toggle {
         display: flex !important;
+        order: 3;
+    }
+
+    .logo {
+        order: 1;
     }
 
     .nav-menu {
-        position: absolute;
-        top: calc(100% + 1rem);
-        left: 0;
-        right: 0;
+        order: 4;
+        flex-basis: 100%;
+        flex-direction: column !important;
+        position: static !important;
         width: 100%;
         background-color: var(--primary-color);
-        flex-direction: column;
         padding: 0;
         margin: 0;
-        gap: 0;
+        gap: 0 !important;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-        z-index: 2000;
         border-top: 2px solid var(--secondary-color);
         max-height: 0;
         overflow: hidden;
@@ -632,16 +635,16 @@ section {
     }
 
     .nav-menu.active {
-        display: flex !important;
-        flex-direction: column;
-        max-height: 500px;
+        max-height: 600px;
         opacity: 1;
+        display: flex !important;
     }
 
     .nav-menu li {
         width: 100%;
         text-align: center;
         border-bottom: 1px solid var(--border-color);
+        display: block;
     }
 
     .nav-menu li:last-child {
