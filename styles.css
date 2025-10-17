@@ -79,6 +79,13 @@ header {
     gap: 2rem;
 }
 
+/* Hide on mobile by default */
+@media (max-width: 1024px) {
+    .nav-menu {
+        display: none;
+    }
+}
+
 .nav-menu a {
     color: var(--text-color);
     text-decoration: none;
@@ -617,27 +624,23 @@ section {
     }
 
     .nav-menu {
+        display: none !important;
         order: 4;
         flex-basis: 100%;
-        flex-direction: column !important;
-        position: static !important;
+        flex-direction: column;
+        position: static;
         width: 100%;
         background-color: var(--primary-color);
         padding: 0;
         margin: 0;
-        gap: 0 !important;
+        gap: 0;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
         border-top: 2px solid var(--secondary-color);
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-        transition: max-height 0.3s ease, opacity 0.3s ease;
     }
 
     .nav-menu.active {
-        max-height: 600px;
-        opacity: 1;
         display: flex !important;
+        flex-direction: column !important;
     }
 
     .nav-menu li {
