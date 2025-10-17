@@ -12,7 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const toggleMenu = () => {
             navMenu.classList.toggle('active');
             mobileMenuToggle.classList.toggle('active');
-            console.log('Menu toggled! Active:', navMenu.classList.contains('active'));
+            const isActive = navMenu.classList.contains('active');
+            console.log('Menu toggled! Active:', isActive);
+            console.log('Menu display style:', window.getComputedStyle(navMenu).display);
+            console.log('Menu position:', window.getComputedStyle(navMenu).position);
         };
 
         // Add click event

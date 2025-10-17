@@ -603,11 +603,11 @@ section {
 /* Responsive Design */
 @media (max-width: 1024px) {
     .mobile-menu-toggle {
-        display: flex;
+        display: flex !important;
     }
 
     .nav-menu {
-        display: none;
+        display: none !important;
         position: absolute;
         top: 100%;
         left: 0;
@@ -622,7 +622,8 @@ section {
     }
 
     .nav-menu.active {
-        display: flex;
+        display: flex !important;
+        flex-direction: column;
     }
 
     .nav-menu li {
