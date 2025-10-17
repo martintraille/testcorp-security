@@ -59,16 +59,19 @@ This guide will help you easily add new blog articles to your TestCorp website.
 ```html
 <!-- YOUR NEW BLOG POST -->
 <article class="blog-card">
-    <div class="blog-image">🔒</div>  <!-- Change emoji to match your topic -->
-    <div class="blog-content">
-        <div class="blog-meta">
-            <span class="blog-date">16 October 2024</span>
-            <span class="blog-category">Your Category</span>
+    <a href="blog/your-article-filename.html" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
+        <div class="blog-image">🔒</div>  <!-- Change emoji to match your topic -->
+        <div class="blog-content">
+            <div class="blog-meta">
+                <span class="blog-date">16 October 2024</span>
+                <span class="blog-category">Your Category</span>
+                <span class="blog-read-time">5 min read</span>
+            </div>
+            <h3>Your Article Title</h3>
+            <p class="blog-excerpt">Your article summary goes here. Keep it to 2-3 sentences.</p>
+            <span class="read-more">Read More →</span>
         </div>
-        <h3><a href="blog/your-article-filename.html">Your Article Title</a></h3>
-        <p class="blog-excerpt">Your article summary goes here. Keep it to 2-3 sentences.</p>
-        <a href="blog/your-article-filename.html" class="read-more">Read More →</a>
-    </div>
+    </a>
 </article>
 ```
 
@@ -76,6 +79,7 @@ This guide will help you easily add new blog articles to your TestCorp website.
    - Change the emoji icon (options: 🔒🎯⚡🛡️🔐💻🚀📊🌐⚔️)
    - Update the date
    - Update the category
+   - Update the reading time (estimate: ~200 words per minute)
    - Update the title and link
    - Update the excerpt
 
@@ -106,16 +110,19 @@ In `blog.html`, add this at the top of the blog grid:
 
 ```html
 <article class="blog-card">
-    <div class="blog-image">☁️</div>
-    <div class="blog-content">
-        <div class="blog-meta">
-            <span class="blog-date">20 October 2024</span>
-            <span class="blog-category">Cloud Security</span>
+    <a href="blog/5-tips-secure-cloud-configuration.html" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
+        <div class="blog-image">☁️</div>
+        <div class="blog-content">
+            <div class="blog-meta">
+                <span class="blog-date">20 October 2024</span>
+                <span class="blog-category">Cloud Security</span>
+                <span class="blog-read-time">4 min read</span>
+            </div>
+            <h3>5 Tips for Secure Cloud Configuration</h3>
+            <p class="blog-excerpt">Learn essential security practices for cloud infrastructure to protect your data and applications from potential threats.</p>
+            <span class="read-more">Read More →</span>
         </div>
-        <h3><a href="blog/5-tips-secure-cloud-configuration.html">5 Tips for Secure Cloud Configuration</a></h3>
-        <p class="blog-excerpt">Learn essential security practices for cloud infrastructure to protect your data and applications from potential threats.</p>
-        <a href="blog/5-tips-secure-cloud-configuration.html" class="read-more">Read More →</a>
-    </div>
+    </a>
 </article>
 ```
 

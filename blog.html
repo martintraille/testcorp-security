@@ -72,15 +72,26 @@
             display: flex;
             gap: 1rem;
             margin-bottom: 1rem;
+            align-items: center;
+            font-size: 0.875rem;
             flex-wrap: wrap;
         }
-        .blog-date, .blog-category {
+        .blog-date {
             color: var(--text-muted);
             font-size: 0.875rem;
         }
         .blog-category {
             color: var(--secondary-color);
             font-weight: 600;
+            font-size: 0.875rem;
+        }
+        .blog-read-time {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            display: inline-flex;
+            align-items: center;
+            flex-basis: 100%;
+            justify-content: flex-end;
         }
         .blog-card h3 {
             color: var(--text-color);
@@ -88,13 +99,11 @@
             font-size: 1.4rem;
             line-height: 1.4;
         }
-        .blog-card h3 a {
-            color: var(--text-color);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        .blog-card h3 a:hover {
+        .blog-card:hover h3 {
             color: var(--secondary-color);
+        }
+        .blog-card a {
+            cursor: pointer;
         }
         .blog-excerpt {
             color: var(--text-muted);
@@ -193,62 +202,71 @@
                 <!-- BLOG POST 1 - Sample Article -->
                 <!-- To add a new post, copy this entire section and update the content -->
                 <article class="blog-card">
-                    <div class="blog-image">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                            <circle cx="12" cy="16" r="1"></circle>
-                        </svg>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">10 October 2025</span>
-                            <span class="blog-category">Penetration Testing</span>
+                    <a href="blog/essential-web-app-security.html" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
+                        <div class="blog-image">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                <circle cx="12" cy="16" r="1"></circle>
+                            </svg>
                         </div>
-                        <h3><a href="blog/essential-web-app-security.html">Essential Web Application Security: A Comprehensive Guide</a></h3>
-                        <p class="blog-excerpt">Learn the fundamental security principles every organization should implement to protect their web applications from common attacks.</p>
-                        <a href="blog/essential-web-app-security.html" class="read-more">Read More →</a>
-                    </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">10 October 2025</span>
+                                <span class="blog-category">Penetration Testing</span>
+                                <span class="blog-read-time">5 min read</span>
+                            </div>
+                            <h3>Essential Web Application Security: A Comprehensive Guide</h3>
+                            <p class="blog-excerpt">Learn the fundamental security principles every organization should implement to protect their web applications from common attacks.</p>
+                            <span class="read-more">Read More →</span>
+                        </div>
+                    </a>
                 </article>
 
                 <!-- BLOG POST 2 - Sample Article -->
                 <article class="blog-card">
-                    <div class="blog-image">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                            <path d="M2 17l10 5 10-5"></path>
-                            <path d="M2 12l10 5 10-5"></path>
-                            <line x1="12" y1="22" x2="12" y2="17"></line>
-                        </svg>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">5 October 2025</span>
-                            <span class="blog-category">Red Team</span>
+                    <a href="blog/red-team-vs-pentest.html" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
+                        <div class="blog-image">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                <path d="M2 17l10 5 10-5"></path>
+                                <path d="M2 12l10 5 10-5"></path>
+                                <line x1="12" y1="22" x2="12" y2="17"></line>
+                            </svg>
                         </div>
-                        <h3><a href="blog/red-team-vs-pentest.html">Red Team Operations vs Penetration Testing: What's the Difference?</a></h3>
-                        <p class="blog-excerpt">Understanding the key differences between red team exercises and traditional penetration testing to choose the right security assessment for your organization.</p>
-                        <a href="blog/red-team-vs-pentest.html" class="read-more">Read More →</a>
-                    </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">5 October 2025</span>
+                                <span class="blog-category">Red Team</span>
+                                <span class="blog-read-time">7 min read</span>
+                            </div>
+                            <h3>Red Team Operations vs Penetration Testing: What's the Difference?</h3>
+                            <p class="blog-excerpt">Understanding the key differences between red team exercises and traditional penetration testing to choose the right security assessment for your organization.</p>
+                            <span class="read-more">Read More →</span>
+                        </div>
+                    </a>
                 </article>
 
                 <!-- BLOG POST 3 - Sample Article -->
                 <article class="blog-card">
-                    <div class="blog-image">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                            <path d="M9 12l2 2 4-4"></path>
-                        </svg>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">1 October 2025</span>
-                            <span class="blog-category">Security Best Practices</span>
+                    <a href="blog/security-testing-checklist.html" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
+                        <div class="blog-image">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                <path d="M9 12l2 2 4-4"></path>
+                            </svg>
                         </div>
-                        <h3><a href="blog/security-testing-checklist.html">The Essential Security Testing Checklist for Modern Applications</a></h3>
-                        <p class="blog-excerpt">A practical checklist covering the critical security tests every application should undergo before deployment.</p>
-                        <a href="blog/security-testing-checklist.html" class="read-more">Read More →</a>
-                    </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">1 October 2025</span>
+                                <span class="blog-category">Security Best Practices</span>
+                                <span class="blog-read-time">6 min read</span>
+                            </div>
+                            <h3>The Essential Security Testing Checklist for Modern Applications</h3>
+                            <p class="blog-excerpt">A practical checklist covering the critical security tests every application should undergo before deployment.</p>
+                            <span class="read-more">Read More →</span>
+                        </div>
+                    </a>
                 </article>
 
                 <!-- ADD NEW BLOG POSTS HERE -->
