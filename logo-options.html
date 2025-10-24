@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestCorp Logo Options</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .logo-showcase {
+            padding: 100px 20px 50px;
+            min-height: 100vh;
+            background: var(--bg-dark);
+        }
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .logo-option {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 2px solid var(--border-color);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .logo-option:hover {
+            border-color: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+        .logo-preview {
+            background: var(--primary-color);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            color: var(--text-color);
+        }
+        .logo-icon-large {
+            font-size: 2.5rem;
+        }
+        .svg-logo {
+            width: 48px;
+            height: 48px;
+            stroke: var(--secondary-color);
+        }
+        .logo-option h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+        .logo-option p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+        .logo-option .label {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        .current {
+            border-color: var(--accent-color);
+        }
+        .current .label {
+            background: var(--accent-color);
+        }
+        h1 {
+            text-align: center;
+            color: var(--secondary-color);
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-showcase">
+        <h1>TestCorp Logo Options</h1>
+
+        <div class="logo-grid">
+            <!-- Current Logo -->
+            <div class="logo-option current">
+                <div class="logo-preview">
+                    <span class="logo-icon-large">🛡️</span>
+                    <span class="logo-text">TestCorp</span>
+                </div>
+                <h3>Shield (Current)</h3>
+                <p>Traditional security focus. Strong protection symbolism.</p>
+                <span class="label">CURRENT</span>
+            </div>
+
+            <!-- Option 1: Checkmark -->
+            <div class="logo-option">
+                <div class="logo-preview">
+                    <span class="logo-icon-large">✓</span>
+                    <span class="logo-text">TestCorp</span>
+                </div>
+                <h3>Checkmark</h3>
+                <p>Quality assurance, validation, testing passed. Clean and professional.</p>
+                <span class="label">RECOMMENDED</span>
+            </div>
+
+            <!-- Option 2: Checkmark in Circle -->
+            <div class="logo-option">
+                <div class="logo-preview">
+                    <span class="logo-icon-large">☑️</span>
+                    <span class="logo-text">TestCorp</span>
+                </div>
+                <h3>Checkbox Verified</h3>
+                <p>Testing completed, quality approved. Strong QA symbolism.</p>
+            </div>
+
+            <!-- Option 3: Target -->
+            <div class="logo-option">
+                <div class="logo-preview">
+                    <span class="logo-icon-large">🎯</span>
+                    <span class="logo-text">TestCorp</span>
+                </div>
+                <h3>Target</h3>
+                <p>Precision testing, hitting quality targets, accuracy.</p>
+            </div>
+
+            <!-- Option 4: Microscope -->
+            <div class="logo-option">
+                <div class="logo-preview">
+                    <span class="logo-icon-large">🔬</span>
+                    <span class="logo-text">TestCorp</span>
+                </div>
+                <h3>Microscope</h3>
+                <p>Deep testing analysis, thorough examination, scientific approach.</p>
+            </div>
+
+            <!-- Option 5: Gear -->
+            <div class="logo-option">
+                <div class="logo-preview">
+                    <span class="logo-icon-large">⚙️</span>
+                    <span class="logo-text">TestCorp</span>
+                </div>
+                <h3>Gear</h3>
+                <p>Automation, engineering, systems. Technical and modern.</p>
+            </div>
+
+            <!-- Option 6: Lightning -->
+            <div class="logo-option">
+                <div class="logo-preview">
+                    <span class="logo-icon-large">⚡</span>
+                    <span class="logo-text">TestCorp</span>
+                </div>
+                <h3>Lightning Bolt</h3>
+                <p>Fast automation, speed, efficiency, power.</p>
+            </div>
+
+            <!-- Option 7: Magnifying Glass -->
+            <div class="logo-option">
+                <div class="logo-preview">
+                    <span class="logo-icon-large">🔍</span>
+                    <span class="logo-text">TestCorp</span>
+                </div>
+                <h3>Magnifying Glass</h3>
+                <p>Bug detection, inspection, finding issues, careful examination.</p>
+            </div>
+
+            <!-- Option 8: Test Tube -->
+            <div class="logo-option">
+                <div class="logo-preview">
+                    <span class="logo-icon-large">🧪</span>
+                    <span class="logo-text">TestCorp</span>
+                </div>
+                <h3>Test Tube</h3>
+                <p>Testing, experimentation, lab quality. Clear testing symbolism.</p>
+            </div>
+
+            <!-- Option 9: Mobile Phone -->
+            <div class="logo-option">
+                <div class="logo-preview">
+                    <span class="logo-icon-large">📱</span>
+                    <span class="logo-text">TestCorp</span>
+                </div>
+                <h3>Mobile Phone</h3>
+                <p>App development focus, mobile testing, modern tech.</p>
+            </div>
+
+            <!-- Option 10: SVG Code Brackets -->
+            <div class="logo-option">
+                <div class="logo-preview">
+                    <svg class="svg-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                    <span class="logo-text">TestCorp</span>
+                </div>
+                <h3>Code Brackets (SVG)</h3>
+                <p>Development, automation, technical expertise. Professional SVG design.</p>
+                <span class="label">MODERN</span>
+            </div>
+
+            <!-- Option 11: SVG Checkmark Circle -->
+            <div class="logo-option">
+                <div class="logo-preview">
+                    <svg class="svg-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="9 12 11 14 15 10"></polyline>
+                    </svg>
+                    <span class="logo-text">TestCorp</span>
+                </div>
+                <h3>Check Badge (SVG)</h3>
+                <p>Quality verified, testing complete. Clean professional SVG.</p>
+                <span class="label">RECOMMENDED</span>
+            </div>
+
+            <!-- Option 12: SVG Shield-Check Hybrid -->
+            <div class="logo-option">
+                <div class="logo-preview">
+                    <svg class="svg-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        <polyline points="9 12 11 14 15 10"></polyline>
+                    </svg>
+                    <span class="logo-text">TestCorp</span>
+                </div>
+                <h3>Shield + Check (SVG)</h3>
+                <p>Security + Quality combined. Bridges old and new identity.</p>
+                <span class="label">BALANCED</span>
+            </div>
+
+            <!-- Option 13: Bug -->
+            <div class="logo-option">
+                <div class="logo-preview">
+                    <span class="logo-icon-large">🐛</span>
+                    <span class="logo-text">TestCorp</span>
+                </div>
+                <h3>Bug</h3>
+                <p>Bug detection and fixing. Classic testing symbolism.</p>
+            </div>
+
+            <!-- Option 14: Rocket -->
+            <div class="logo-option">
+                <div class="logo-preview">
+                    <span class="logo-icon-large">🚀</span>
+                    <span class="logo-text">TestCorp</span>
+                </div>
+                <h3>Rocket</h3>
+                <p>Fast deployment, launch, speed to market, innovation.</p>
+            </div>
+
+            <!-- Option 15: Star -->
+            <div class="logo-option">
+                <div class="logo-preview">
+                    <span class="logo-icon-large">⭐</span>
+                    <span class="logo-text">TestCorp</span>
+                </div>
+                <h3>Star</h3>
+                <p>Excellence, quality, five-star service. Premium positioning.</p>
+            </div>
+
+            <!-- Option 16: Diamond -->
+            <div class="logo-option">
+                <div class="logo-preview">
+                    <span class="logo-icon-large">💎</span>
+                    <span class="logo-text">TestCorp</span>
+                </div>
+                <h3>Diamond</h3>
+                <p>Premium quality, precision, value. Polished and refined.</p>
+            </div>
+
+            <!-- Option 17: Robot -->
+            <div class="logo-option">
+                <div class="logo-preview">
+                    <span class="logo-icon-large">🤖</span>
+                    <span class="logo-text">TestCorp</span>
+                </div>
+                <h3>Robot</h3>
+                <p>Automation, AI-powered testing, modern tech. Friendly and approachable.</p>
+            </div>
+
+            <!-- Option 18: Chart -->
+            <div class="logo-option">
+                <div class="logo-preview">
+                    <span class="logo-icon-large">📊</span>
+                    <span class="logo-text">TestCorp</span>
+                </div>
+                <h3>Chart</h3>
+                <p>Analytics, metrics, data-driven testing, continuous improvement.</p>
+            </div>
+
+            <!-- Option 19: Clipboard -->
+            <div class="logo-option">
+                <div class="logo-preview">
+                    <span class="logo-icon-large">📋</span>
+                    <span class="logo-text">TestCorp</span>
+                </div>
+                <h3>Clipboard</h3>
+                <p>Test plans, checklists, documentation. Organised and methodical.</p>
+            </div>
+
+            <!-- Option 20: Sparkles -->
+            <div class="logo-option">
+                <div class="logo-preview">
+                    <span class="logo-icon-large">✨</span>
+                    <span class="logo-text">TestCorp</span>
+                </div>
+                <h3>Sparkles</h3>
+                <p>Polished quality, refined code, excellence. Clean and modern.</p>
+            </div>
+
+            <!-- Option 21: SVG Gauge -->
+            <div class="logo-option">
+                <div class="logo-preview">
+                    <svg class="svg-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"></path>
+                        <path d="M12 6v6l4 2"></path>
+                    </svg>
+                    <span class="logo-text">TestCorp</span>
+                </div>
+                <h3>Speedometer (SVG)</h3>
+                <p>Performance testing, speed metrics, monitoring. Technical and precise.</p>
+            </div>
+
+            <!-- Option 22: SVG Play Button -->
+            <div class="logo-option">
+                <div class="logo-preview">
+                    <svg class="svg-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                    </svg>
+                    <span class="logo-text">TestCorp</span>
+                </div>
+                <h3>Play Button (SVG)</h3>
+                <p>App launch, CI/CD, automation running. Modern and dynamic.</p>
+            </div>
+
+            <!-- Option 23: SVG Layers -->
+            <div class="logo-option">
+                <div class="logo-preview">
+                    <svg class="svg-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 17 12 22 22 17"></polyline>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
+                    <span class="logo-text">TestCorp</span>
+                </div>
+                <h3>Tech Stack (SVG)</h3>
+                <p>Multi-layer testing, tech stack expertise, comprehensive coverage.</p>
+            </div>
+
+            <!-- Option 24: SVG Hexagon Badge -->
+            <div class="logo-option">
+                <div class="logo-preview">
+                    <svg class="svg-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                        <polyline points="9 12 11 14 15 10"></polyline>
+                    </svg>
+                    <span class="logo-text">TestCorp</span>
+                </div>
+                <h3>Hexagon Badge (SVG)</h3>
+                <p>Modern tech aesthetic, certification, quality seal. GitHub-inspired.</p>
+                <span class="label">MODERN</span>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: var(--bg-card); border-radius: 10px; max-width: 800px; margin-left: auto; margin-right: auto;">
+            <h3 style="color: var(--secondary-color); margin-bottom: 1rem;">My Recommendations</h3>
+            <div style="color: var(--text-muted); text-align: left; line-height: 1.8;">
+                <p><strong style="color: var(--text-color);">Best Overall: SVG Check Badge</strong><br>
+                Clean, modern, professional. Represents quality assurance perfectly while maintaining brand credibility.</p>
+
+                <p><strong style="color: var(--text-color);">Best for Transition: Shield + Check SVG</strong><br>
+                Combines your current security identity with the new QA focus. Familiar yet forward-looking.</p>
+
+                <p><strong style="color: var(--text-color);">Best Simple Option: Checkmark (✓)</strong><br>
+                Universal symbol for quality and verification. Instantly recognisable.</p>
+
+                <p><strong style="color: var(--text-color);">Best for Tech Focus: Code Brackets SVG</strong><br>
+                Shows automation and development expertise. Very technical and modern.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

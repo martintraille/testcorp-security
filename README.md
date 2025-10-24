@@ -292,6 +292,8 @@ git push origin master
 - Revised "Why Choose TestCorp?" section for broader service focus
 - Updated blog heading to "Quality Assurance Insights & Updates"
 - Created new blog articles: Playwright vs Selenium, CI/CD Test Automation
+- Updated contact section tagline to "Ready to elevate your software quality?"
+- Updated contact form service dropdown to reflect current services (removed Red Team Operations and Security Consulting, added Automation Testing and App Development)
 
 **Footer Updates:**
 - Updated footer description across all pages
