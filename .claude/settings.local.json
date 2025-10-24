@@ -1,7 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "Bash(find:*)"
+      "Bash(for file in blog/*.html)"
     ],
     "deny": [],
     "ask": []

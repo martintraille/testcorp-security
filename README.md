@@ -1,6 +1,6 @@
-# TestCorp Security Website
+# TestCorp Website
 
-Professional security testing and red team services website for TestCorp Ltd.
+Professional software testing, test automation, security testing, and app development services website for TestCorp Ltd.
 
 ## 🌐 Live Website
 
@@ -31,23 +31,30 @@ If needed, you can trigger a manual deploy from the Netlify dashboard:
 ```
 testcorp-security/
 ├── index.html              # Homepage with hero, services, about, contact
-├── blog.html               # Blog listing page
+├── blog.html               # Blog listing page (QA & testing focus)
 ├── careers.html            # Careers page with open positions
+├── app-development-privacy-policy.html  # Privacy policy for Days Until app
 ├── styles.css              # Main stylesheet (mobile-first design)
 ├── animations.css          # Animation styles
 ├── script.js               # JavaScript for interactions and mobile menu
 ├── BLOG-INSTRUCTIONS.md    # Instructions for adding blog posts
+├── assets/                 # Media files (videos, images)
+│   └── Days Until (New iOS app).mp4
 ├── blog/                   # Individual blog post pages
-│   ├── essential-web-app-security.html
+│   ├── playwright-vs-selenium.html
+│   ├── ci-cd-test-automation.html
+│   ├── security-testing-checklist.html
 │   ├── red-team-vs-pentest.html
-│   └── security-testing-checklist.html
+│   └── essential-web-app-security.html
 └── services/               # Individual service pages
+    ├── software-testing.html
+    ├── automation-testing.html
     ├── penetration-testing.html
-    ├── red-team-operations.html
-    ├── security-consulting.html
-    ├── code-review.html
-    ├── cloud-security.html
-    └── compliance-testing.html
+    ├── app-development.html
+    ├── security-assessment.html
+    ├── security-training.html
+    ├── red-team.html (legacy)
+    └── security-consulting.html (legacy)
 ```
 
 ## 🎨 Design System
@@ -178,21 +185,63 @@ Forms submit directly to Formspree endpoints - no backend code needed.
 
 ### Main Pages
 - **Homepage** (index.html) - Hero, services overview, about, stats, contact
-- **Blog** (blog.html) - Blog post listing with 3 sample posts
+- **Blog** (blog.html) - QA & testing insights, automation, and security articles
 - **Careers** (careers.html) - Open positions, benefits, company values
 
 ### Service Pages (in services/)
-- Penetration Testing
+Active Services:
+1. **Software Testing** - Functional, performance, regression, integration, UAT, AI-powered testing with MCP
+2. **Automation Testing** - Test automation frameworks, CI/CD integration, regression, API testing
+3. **Penetration Testing** - Web app, network, mobile app, API security testing
+4. **App Development** - Mobile apps (iOS/Android), web apps, UI/UX design, Days Until showcase
+5. **Security Training** - Security awareness, secure development, incident response
+6. **Security Assessments** - Vulnerability assessments, compliance audits, architecture review
+
+Legacy pages (not in main navigation):
 - Red Team Operations
 - Security Consulting
-- Code Review
-- Cloud Security Assessment
-- Compliance Testing
 
 ### Legal Pages
 - Privacy Policy
 - Terms of Service
 - Responsible Disclosure
+- App Development Privacy Policy (for Days Until app)
+
+## ✨ Key Features
+
+### AI-Powered Testing
+- **AI-Powered Testing with MCP** section in Software Testing service
+- Covers intelligent test generation, smart test data creation, visual testing with AI
+- Model Context Protocol (MCP) integration for connecting AI assistants to testing tools
+- Use cases include exploratory testing, regression optimisation, and performance anomaly detection
+
+### Days Until App Showcase
+- Featured in App Development service page
+- Live iOS app available on App Store
+- Video demonstration embedded on the page
+- Complete case study showing mobile app development capabilities
+- Separate privacy policy page for the app
+
+### Blog Content
+Focus on quality assurance and automation:
+- **Playwright vs Selenium** - Framework comparison for test automation
+- **CI/CD Test Automation** - Best practices for integrating tests into pipelines
+- **Security Testing Checklist** - Comprehensive security testing guide
+
+### Repositioned Services
+Services prioritised in this order:
+1. Software Testing (with new AI-powered testing)
+2. Automation Testing (elevated to standalone service)
+3. Penetration Testing
+4. App Development (new service)
+5. Security Training
+6. Security Assessments
+
+### Updated Branding
+- Tagline: "Professional Software Testing, Automation Testing, Penetration Testing, & App Development"
+- About: "Your Trusted Quality Assurance Partner"
+- Focus on QA, testing, and app development alongside security
+- British English spelling throughout (organisation, optimisation, etc.)
 
 ## 🔐 Security
 
@@ -221,15 +270,64 @@ git push origin master
 ```
 
 ### Recent Updates
+
+**Major Service Repositioning (October 2025):**
+- Repositioned from security-only to quality assurance and app development focus
+- Removed Red Team Operations from main services (moved to legacy)
+- Removed Security Consulting from main services (moved to legacy)
+- Added Automation Testing as standalone service
+- Added App Development service with Days Until app showcase
+- Reorganised services: Software Testing → Automation Testing → Penetration Testing → App Development → Security Training → Security Assessments
+
+**New Features:**
+- Added AI-Powered Testing with MCP section to Software Testing service
+- Integrated Days Until iOS app showcase in App Development
+- Created app-development-privacy-policy.html for mobile app
+- Added video demo for Days Until app
+
+**Content Updates:**
+- Updated hero tagline to include App Development & Automation Testing
+- Changed About section from "Security Partner" to "Quality Assurance Partner"
+- Updated stats: 50+ Organisations Secured, 100+ Security Assessments
+- Revised "Why Choose TestCorp?" section for broader service focus
+- Updated blog heading to "Quality Assurance Insights & Updates"
+- Created new blog articles: Playwright vs Selenium, CI/CD Test Automation
+
+**Footer Updates:**
+- Updated footer description across all pages
+- Updated services list in all footers
+- Fixed all footer service links to point to correct pages
+- Changed to British English spelling (organisation, optimisation)
+
+**Technical:**
 - Fixed mobile hamburger menu (removed duplicate JS declarations)
 - Replaced emoji icons with SVG icons across blog and careers pages
 - Added Blog link to navigation across all pages
 - Fixed careers page width consistency (1200px)
 - Aligned careers page icons to left (matching services)
 
+## 📊 Website Statistics
+
+- **Stats Displayed:**
+  - 50+ Organisations Secured
+  - 100+ Security Assessments
+  - 10+ Years Experience
+
+- **Services:** 6 active services (Software Testing, Automation Testing, Penetration Testing, App Development, Security Training, Security Assessments)
+- **Blog Articles:** 5 posts (focus on QA, automation, and security)
+- **Service Pages:** 6 detailed pages with sub-service sections
+
 ## 📞 Contact
 
 For website updates or questions, contact Martin Traille.
+
+### Email Configuration
+- **DNS Provider:** Netlify
+- **Email Service:** Microsoft 365 (via secureserver.net)
+- **Required DNS Records:**
+  - TXT: Microsoft verification and SPF record
+  - CNAME: autodiscover and email subdomain
+  - MX: Mail exchange pointing to Microsoft
 
 ---
 

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automation Testing Services - TestCorp</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../animations.css">
+    <style>
+        .service-page { padding-top: 100px; min-height: 100vh; }
+        .service-hero { text-align: center; padding: 3rem 2rem; background: linear-gradient(135deg, var(--bg-dark) 0%, var(--primary-color) 100%); }
+        .service-hero h1 { color: var(--secondary-color); font-size: 3rem; margin-bottom: 1rem; }
+        .service-hero p { color: var(--text-muted); font-size: 1.3rem; max-width: 800px; margin: 0 auto; }
+        .service-content { max-width: 1200px; margin: 0 auto; padding: 3rem 2rem; }
+        .sub-services { display: grid; gap: 3rem; margin-top: 3rem; }
+        .sub-service { background: var(--bg-card); padding: 2rem; border-radius: 10px; border: 1px solid var(--border-color); scroll-margin-top: 300px; }
+        .sub-service h2 { color: var(--secondary-color); margin-bottom: 1rem; font-size: 2rem; }
+        .sub-service h3 { color: var(--text-color); margin-top: 1.5rem; margin-bottom: 0.75rem; }
+        .sub-service p { color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem; }
+        .sub-service ul { margin-left: 2rem; color: var(--text-muted); }
+        .sub-service ul li { margin-bottom: 0.75rem; }
+        .service-nav { background: var(--bg-card); padding: 2rem; border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 3rem; position: sticky; top: 100px; z-index: 100; }
+        .service-nav h3 { color: var(--secondary-color); margin-bottom: 1rem; }
+        .service-nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 1rem; }
+        .service-nav a { color: var(--text-muted); text-decoration: none; padding: 0.5rem 1rem; border: 1px solid var(--border-color); border-radius: 5px; transition: all 0.3s ease; display: block; }
+        .service-nav a:hover { background: var(--secondary-color); color: var(--primary-color); }
+        .service-nav a.active { background: var(--secondary-color); color: var(--primary-color); }
+        @media (max-width: 768px) { .service-hero h1 { font-size: 2rem; } .service-nav { position: static; } }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo"><a href="../index.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit;"><span class="logo-icon">🛡️</span><span class="logo-text">TestCorp</span></a></div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#services">Services</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../careers.html">Careers</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="service-page">
+        <div class="service-hero">
+            <h1>Automation Testing Services</h1>
+            <p>Streamline your testing process with automated test frameworks that ensure consistent quality and faster release cycles.</p>
+        </div>
+
+        <div class="service-content">
+            <div class="service-nav">
+                <h3>Our Automation Testing Services:</h3>
+                <ul>
+                    <li><a href="#frameworks">Test Automation Frameworks</a></li>
+                    <li><a href="#ci-cd">CI/CD Integration</a></li>
+                    <li><a href="#regression">Automated Regression Testing</a></li>
+                    <li><a href="#api-testing">API Test Automation</a></li>
+                </ul>
+            </div>
+
+            <div class="sub-services">
+                <div id="frameworks" class="sub-service">
+                    <h2>Test Automation Frameworks</h2>
+                    <p>We design and implement robust, scalable test automation frameworks tailored to your specific technology stack and testing requirements. Our frameworks are maintainable, reusable, and built following industry best practices.</p>
+                    <h3>Framework Capabilities:</h3>
+                    <ul>
+                        <li>Page Object Model (POM) design pattern implementation</li>
+                        <li>Data-driven and keyword-driven testing approaches</li>
+                        <li>Behavior-Driven Development (BDD) with Cucumber/SpecFlow</li>
+                        <li>Modular and reusable test component libraries</li>
+                        <li>Comprehensive reporting and logging mechanisms</li>
+                        <li>Cross-browser and cross-platform support</li>
+                    </ul>
+                    <h3>Technologies We Use:</h3>
+                    <ul>
+                        <li><strong>Web:</strong> Selenium WebDriver, Cypress, Playwright, TestCafe</li>
+                        <li><strong>Mobile:</strong> Appium, Espresso, XCUITest, Detox</li>
+                        <li><strong>Languages:</strong> Java, Python, JavaScript, TypeScript, C#</li>
+                        <li><strong>Test Runners:</strong> JUnit, TestNG, PyTest, Jest, Mocha</li>
+                    </ul>
+                </div>
+
+                <div id="ci-cd" class="sub-service">
+                    <h2>CI/CD Integration</h2>
+                    <p>Seamlessly integrate automated tests into your Continuous Integration and Continuous Deployment pipelines. We help you implement shift-left testing practices to catch defects early in the development cycle.</p>
+                    <h3>Integration Services:</h3>
+                    <ul>
+                        <li>Jenkins pipeline configuration and optimisation</li>
+                        <li>GitLab CI/CD and GitHub Actions workflow setup</li>
+                        <li>Azure DevOps and AWS CodePipeline integration</li>
+                        <li>Docker containerization for consistent test environments</li>
+                        <li>Parallel test execution for faster feedback</li>
+                        <li>Build status notifications and alerts</li>
+                    </ul>
+                    <h3>Benefits:</h3>
+                    <ul>
+                        <li>Automated test execution on every code commit</li>
+                        <li>Immediate feedback to development teams</li>
+                        <li>Prevention of defective code reaching production</li>
+                        <li>Reduced manual testing overhead</li>
+                        <li>Faster time-to-market for new features</li>
+                        <li>Improved software quality and reliability</li>
+                    </ul>
+                </div>
+
+                <div id="regression" class="sub-service">
+                    <h2>Automated Regression Testing</h2>
+                    <p>Automated regression testing ensures that new code changes don't break existing functionality. We build comprehensive regression test suites that run automatically with every release.</p>
+                    <h3>Our Approach:</h3>
+                    <ul>
+                        <li>Critical path and high-priority test case automation</li>
+                        <li>Risk-based test suite optimisation</li>
+                        <li>Scheduled and on-demand test execution</li>
+                        <li>Visual regression testing for UI changes</li>
+                        <li>Database state validation and verification</li>
+                        <li>Test data management and cleanup strategies</li>
+                    </ul>
+                    <h3>Test Coverage:</h3>
+                    <ul>
+                        <li>End-to-end business workflows</li>
+                        <li>Core application functionality</li>
+                        <li>Integration points between systems</li>
+                        <li>User interface components and interactions</li>
+                        <li>Data processing and calculations</li>
+                        <li>Authentication and authorization flows</li>
+                    </ul>
+                </div>
+
+                <div id="api-testing" class="sub-service">
+                    <h2>API Test Automation</h2>
+                    <p>Comprehensive API testing automation to validate your web services, RESTful APIs, GraphQL endpoints, and microservices. We ensure your APIs are reliable, performant, and secure.</p>
+                    <h3>Testing Scope:</h3>
+                    <ul>
+                        <li>Functional validation of API endpoints</li>
+                        <li>Request/response schema validation</li>
+                        <li>Authentication and authorization testing</li>
+                        <li>Error handling and status code verification</li>
+                        <li>Performance and load testing of APIs</li>
+                        <li>Security testing (injection, authentication bypass)</li>
+                    </ul>
+                    <h3>Tools & Technologies:</h3>
+                    <ul>
+                        <li><strong>REST API:</strong> RestAssured, Postman/Newman, Axios, SuperTest</li>
+                        <li><strong>GraphQL:</strong> Apollo Client Testing, GraphQL Request</li>
+                        <li><strong>SOAP:</strong> SoapUI, SOAP Client libraries</li>
+                        <li><strong>Performance:</strong> JMeter, Gatling, K6</li>
+                        <li><strong>Contract Testing:</strong> Pact, Spring Cloud Contract</li>
+                        <li><strong>Documentation:</strong> Swagger/OpenAPI validation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="background: var(--bg-card); padding: 3rem; border-radius: 10px; border: 1px solid var(--border-color); margin-top: 3rem; text-align: center;">
+                <h2 style="color: var(--secondary-color); margin-bottom: 1rem;">Ready to Accelerate Your Testing?</h2>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">Contact us to discuss your automation testing needs and learn how we can help you achieve faster releases with higher quality.</p>
+                <a href="../index.html#contact" class="btn btn-primary">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section"><div class="logo"><a href="../index.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit;"><span class="logo-icon">🛡️</span><span class="logo-text">TestCorp</span></a></div><p>Professional security testing, automation, and app development services to protect and enhance your digital assets.</p></div>
+                <div class="footer-section"><h4>Services</h4><ul><li><a href="software-testing.html">Software Testing</a></li><li><a href="penetration-testing.html">Penetration Testing</a></li><li><a href="automation-testing.html">Automation Testing</a></li><li><a href="security-assessment.html">Security Assessment</a></li><li><a href="security-training.html">Security Training</a></li><li><a href="app-development.html">App Development</a></li></ul></div>
+                <div class="footer-section"><h4>Company</h4><ul><li><a href="../index.html#about">About Us</a></li><li><a href="../index.html#contact">Contact</a></li><li><a href="../careers.html">Careers</a></li><li><a href="../blog.html">Blog</a></li></ul></div>
+                <div class="footer-section"><h4>Legal</h4><ul><li><a href="../privacy-policy.html">Privacy Policy</a></li><li><a href="../terms-of-service.html">Terms of Service</a></li><li><a href="../responsible-disclosure.html">Responsible Disclosure</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2025 TestCorp. All rights reserved.</p></div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+    <script>
+        // Service page navigation - update active state on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.service-nav a');
+            const sections = document.querySelectorAll('.sub-service');
+
+            // Handle click to add active state immediately
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Update active state based on scroll position
+            function updateActiveLink() {
+                let currentSection = '';
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 300;
+                    const sectionHeight = section.clientHeight;
+                    if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + currentSection) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', updateActiveLink);
+            updateActiveLink(); // Run on page load
+        });
+    </script>
+</body>
+</html>
