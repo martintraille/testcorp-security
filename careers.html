@@ -408,13 +408,25 @@
                                 <label style="display: block; color: var(--text-color); margin-bottom: 0.5rem; font-weight: 500;">Position of Interest *</label>
                                 <select name="position" id="career-position" required style="width: 100%; padding: 1rem; border: 1px solid var(--border-color); background-color: var(--primary-color); color: var(--text-color); border-radius: 5px; font-size: 1rem; font-family: inherit; cursor: pointer;">
                                     <option value="">Select a position</option>
-                                    <option value="Penetration Tester - Junior">Penetration Tester - Junior</option>
-                                    <option value="Penetration Tester - Mid-Level">Penetration Tester - Mid-Level</option>
-                                    <option value="Penetration Tester - Senior">Penetration Tester - Senior</option>
-                                    <option value="Security Consultant">Security Consultant</option>
-                                    <option value="Red Team Operator">Red Team Operator</option>
-                                    <option value="QA / Software Testing Engineer">QA / Software Testing Engineer</option>
-                                    <option value="Security Researcher">Security Researcher</option>
+
+                                    <optgroup label="Software Testing">
+                                        <option value="Manual Tester">Manual Tester</option>
+                                        <option value="Automation Test Engineer">Automation Test Engineer</option>
+                                        <option value="QA / Software Testing Engineer">QA / Software Testing Engineer</option>
+                                    </optgroup>
+
+                                    <optgroup label="Security Testing">
+                                        <option value="Penetration Tester - Junior">Penetration Tester - Junior</option>
+                                        <option value="Penetration Tester - Mid-Level">Penetration Tester - Mid-Level</option>
+                                        <option value="Penetration Tester - Senior">Penetration Tester - Senior</option>
+                                    </optgroup>
+
+                                    <optgroup label="Security Roles">
+                                        <option value="Red Team Operator">Red Team Operator</option>
+                                        <option value="Security Consultant">Security Consultant</option>
+                                        <option value="Security Researcher">Security Researcher</option>
+                                    </optgroup>
+
                                     <option value="Other">Other</option>
                                 </select>
                             </div>
