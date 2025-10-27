@@ -1,0 +1,5 @@
+# Netlify Redirects
+# https://docs.netlify.com/routing/redirects/
+
+# Days Until App redirect
+/daysuntil /services/app-development.html#days-until 301
